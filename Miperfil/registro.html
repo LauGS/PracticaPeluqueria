@@ -193,6 +193,7 @@
       console.log(json);
       $.getJSON("Usuarios.json",function(usuario){
         usuario["Usuarios"].push(json);
+        alert("Perfil Creado");
           /*  $.ajax({
             data: JSON.stringify(usuario),
             url: 'registro.php',
@@ -200,9 +201,9 @@
             success: function() {
             }            
         });*/
-        $.post("registro.php",JSON.stringify(usuario),function(){
-            alert("Perfil creado");
-        })  
+        //$.post("registro.php",JSON.stringify(usuario),function(){
+            
+        //})  
     })
 } 
 </script>

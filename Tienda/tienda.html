@@ -233,7 +233,7 @@
 <script>
     function cargaP(){
         console.log(window.sessionStorage.getItem('log'));
-         $("#1").empty();
+        $("#1").empty();
         $.getJSON("Productos.json", function(productos){
             $.each(productos["Productos"],function(idx,producto){
                $("#1").append("<div class=\"card p-1\"><img src=\"" + producto["Dirfoto"] + "\"class=\"card-img-top\" alt=\"...\"><div class=\"card-body\"><h5 class=\"card-title\">" +producto["Nombre"]+"</h5><h4>"+producto["Precio"]+"$"+"</h4><button type=\"button\" class=\"btn btn-default btn-md bg-primary text-white\" style=\"margin-left: 65%\">Comprar</button> </div></div>");
