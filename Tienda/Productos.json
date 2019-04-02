@@ -63,7 +63,7 @@
             "Precio": 300,
             "Marca": "marca3",
             "Dirfoto": "../Imagenes/plancha2.jpg"
-        },
+        }
     
     ]
 }
