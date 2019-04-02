@@ -1,0 +1,20 @@
+{
+    "Usuarios": [
+        {
+            "Nombre": "Carlos",
+            "Apellidos": "Vila Marin",
+            "Correo": "carlos@peluqueria.com",
+            "Contraseña": "123",
+            "Admin": "true",
+            "Telefono": "666666666"
+        },
+        {
+            "Nombre": "Michael",
+            "Apellidos": "Cera",
+            "Correo": "michael@peluqueria.com",
+            "Contraseña": "123",
+            "Admin": "false",
+            "Telefono":"555555555"
+        }
+    ]
+}

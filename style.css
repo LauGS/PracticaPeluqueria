@@ -1,0 +1,97 @@
+*{
+    margin:0px;
+    padding:0px,
+}
+a.navbar-brand{
+    margin-left:5%;
+    color:white;
+    border-bottom: 2px solid black;
+    font-family: 'Pacifico', cursive;s
+}
+.navbar{
+    background-color: black;
+    color:white;
+    padding:0px;
+    height:75px;
+    border-bottom: 2px solid black;
+}
+.navbar-collapse .navbar-center{
+    background-color: black;
+    color:white;
+    border-bottom: 2px solid black;
+    
+}
+.nav-link{
+    font-size: 20px;
+    color:white;
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+
+}
+.nav-link:hover{
+    color:yellow;
+}
+
+li{
+    height:75px;
+    padding-top:12.5px;
+    width: 250px;
+}
+
+li:hover{
+    height:75px;
+}
+ul{
+  text-align:center;
+}
+.dropdown-menu{
+    background-color: black;
+    border-radius: 0px;
+    border:none;
+}
+a.dropdown-item{
+    height:75px;
+    width: 250px;
+    font-size: 20px;
+    font-family: 'Fjalla One', sans-serif;
+    color:white;
+    padding-top:12.5px;
+    text-align: center;
+}
+a.dropdown-item:hover{
+    color:yellow;
+    border-bottom-color:black;
+    border-bottom: 2px solid black;
+    background-color:black;
+}
+i{
+  text-align: center;
+  font-size:17px;
+}
+i.fa-bars{
+  color:white;
+}
+.card-deck{
+    padding:5%;
+    
+}
+
+.carousel{
+    padding-right:5%;
+    padding-left:5%;
+    max-height: 90%;
+}
+.card-colored{
+    background-color: lightblue;
+    margin-top:5%;
+   
+}
+.container-fluid{
+    background-color: black;
+    color:white;
+    padding: 4%;
+}
+.card1{
+    margin:10%;
+    padding:5%;
+}

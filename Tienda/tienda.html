@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<!--Aqui van los enlaces, metadatos y el titulo de la pagina-->
+<head>
+    <!--metadatos y titulo-->
+    <meta charset="utf-8">
+    <title>Peluqueria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--enlaces de bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!--enlaces de fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!--enlace al css y tipografias-->
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+    <!--enlaces de mmenu-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery.mmenu.js"></script>
+    <link href="jquery.mmenu.css" rel="stylesheet">
+    <style type="text/css">
+      .mm-menu {
+             --mm-color-background:black;
+             --mm-color-border:white;
+             --mm-color-text:white;
+             --mm-color-button:white;
+          --mm-line-height:0px;
+        }
+   </style>
+
+</head>
+
+<!--Aqui va el cuerpo de texto y la pagina en general-->
+<body onload="cargaP()">
+
+
+
+  <div id="my-page">
+    <div id="my-header">
+    <nav class="navbar navbar-expand-lg sticky-top">
+
+        <a class="navbar-brand" href="#">Peluqueria</a>
+
+        <button id="my-button" class="navbar-toggler" type="button">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav mr-auto mm-nolistview">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PELUQUERIA</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="Peluqueria/tint.html">Tinte</a>
+                          <a class="dropdown-item" href="#">Permanente</a>
+                          <a class="dropdown-item" href="#">Corte</a>
+                          <a class="dropdown-item" href="#">Peinado</a>
+                        </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ESTÉTICA</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Depilación</a>
+                          <a class="dropdown-item" href="#">Manicura</a>
+                          <a class="dropdown-item" href="#">Limpieza</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">TIENDA</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="Miperfil/perf.html">MI PERFIL   <i class="fas fa-user">  </i>  </a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="#">CARRITO   <i class="fas fa-shopping-cart"></i>
+  </a>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+  </div>
+
+<!--
+  <div id="my-menu">
+      <ul id="my-ul">
+        <li><a href="#">PELUQUERIA</a><ul>
+          <li><a href="Peluqueria/tint.html">Tinte</a></li>
+          <li><a href="#">Permanente</a></li>
+          <li><a href="#">Corte</a></li>
+          <li><a href="#">Peinado</a></li>
+
+        </ul></li>
+
+        <li><a href="#">ESTÉTICA</a><ul>
+          <li><a href="#">Depilación</a></li>
+          <li><a href="#">Manicura</a></li>
+          <li><a href="#">Limpieza</a></li>
+
+        </ul></li>
+
+        <li><a href="#">TIENDA</a><ul>
+          <li><a href="#">Champú Hombre</a></li>
+          <li><a href="#">Champú Mujer</a></li>
+          <li><a href="#">Secador</a></li>
+          <li><a href="#">Plancha</a></li>
+          <li><a href="#">Crema</a></li>
+
+        </ul></li>
+        <li><a href="#">MI PERFIL</a></li>
+      </ul>
+  </div>
+
+
+  <script>
+     $(document).ready(function() {
+        $("#my-menu").mmenu({
+
+        });
+        var API = $("#my-menu").data( "mmenu" );
+
+        $("#my-button").click(function() {
+           API.open();
+        });
+     });
+  </script>
+
+-->
+
+ <h1 class="text-center" style="margin-top:3%; margin-bottom:3%;">Tienda</h1>
+ <!--filtros-->
+ <div class="container" style="text-align:center;">
+    <button onclick="cargaP()" class="btn bg-secondary text-white m-2">
+        Mostrar Todos
+    </button>
+    <button onclick="mostrarChampusH()" class="btn bg-secondary text-white m-2">
+        Champús de Hombre
+    </button>  
+    <button onclick="mostrarChampusM()" class="btn bg-secondary text-white m-2">
+        Champús de Mujer
+    </button> 
+    <button onclick="mostrarSecadores()" class="btn bg-secondary text-white m-2">
+        Secadores
+    </button> 
+    <button onclick="mostrarPlanchas()" class="btn bg-secondary text-white m-2">
+        Planchas para el pelo
+    </button>
+    <button onclick="mostrarCremas()" class="btn bg-secondary text-white m-2">
+        Cremas
+    </button>   
+ </div>
+ 
+<script>
+    function mostrarChampusH(){
+        console.log("click");
+        $("#1").empty();
+        var n = "ChampuH";
+        $.getJSON("Productos.json", function(productos){
+            $.each(productos["Productos"],function(idx,producto){
+             if(n.localeCompare(producto["Tipo"])==0){
+               $("#1").append("<div class=\"card p-1\"><img src=\"" + producto["Dirfoto"] + "\"class=\"card-img-top\" alt=\"...\"><div class=\"card-body\"><h5 class=\"card-title\">" +producto["Nombre"]+"</h5><h4>"+producto["Precio"] +"$"+"</h4><button type=\"button\" class=\"btn btn-default btn-md bg-primary text-white\" style=\"margin-left: 65%\">Comprar</button> </div></div>");}
+            })
+        })
+    }
+    
+    function mostrarChampusM(){
+        console.log("click");
+        $("#1").empty();
+        var n = "ChampuM";
+        $.getJSON("Productos.json", function(productos){
+            $.each(productos["Productos"],function(idx,producto){
+             if(n.localeCompare(producto["Tipo"])==0){
+               $("#1").append("<div class=\"card p-1\"><img src=\"" + producto["Dirfoto"] + "\"class=\"card-img-top\" alt=\"...\"><div class=\"card-body\"><h5 class=\"card-title\">" +producto["Nombre"]+"</h5><h4>"+producto["Precio"]+"$"+"</h4><button type=\"button\" class=\"btn btn-default btn-md bg-primary text-white\" style=\"margin-left: 65%\">Comprar</button> </div></div>");}
+            })
+        })
+    }
+    
+    function mostrarSecadores(){
+        console.log("click");
+        $("#1").empty();
+        var n = "Secador";
+        $.getJSON("Productos.json", function(productos){
+            $.each(productos["Productos"],function(idx,producto){
+             if(n.localeCompare(producto["Tipo"])==0){
+               $("#1").append("<div class=\"card p-1\"><img src=\"" + producto["Dirfoto"] + "\"class=\"card-img-top\" alt=\"...\"><div class=\"card-body\"><h5 class=\"card-title\">" +producto["Nombre"]+"</h5><h4>"+producto["Precio"]+"$"+"</h4><button type=\"button\" class=\"btn btn-default btn-md bg-primary text-white\" style=\"margin-left: 65%\">Comprar</button> </div></div>");}
+            })
+        })
+    }
+    
+    function mostrarPlanchas(){
+        console.log("click");
+        $("#1").empty();
+        var n = "Plancha";
+        $.getJSON("Productos.json", function(productos){
+            $.each(productos["Productos"],function(idx,producto){
+             if(n.localeCompare(producto["Tipo"])==0){
+               $("#1").append("<div class=\"card p-1\"><img src=\"" + producto["Dirfoto"] + "\"class=\"card-img-top\" alt=\"...\"><div class=\"card-body\"><h5 class=\"card-title\">" +producto["Nombre"]+"</h5><h4>"+producto["Precio"]+"$"+"</h4><button type=\"button\" class=\"btn btn-default btn-md bg-primary text-white\" style=\"margin-left: 65%\">Comprar</button> </div></div>");}
+            })
+        })
+    }
+    
+    function mostrarCremas(){
+        console.log("click");
+        $("#1").empty();
+        var n = "Crema";
+        $.getJSON("Productos.json", function(productos){
+            $.each(productos["Productos"],function(idx,producto){
+             if(n.localeCompare(producto["Tipo"])==0){
+               $("#1").append("<div class=\"card p-1\"><img src=\"" + producto["Dirfoto"] + "\"class=\"card-img-top\" alt=\"...\"><div class=\"card-body\"><h5 class=\"card-title\">" +producto["Nombre"]+"</h5><h4>"+producto["Precio"]+"$"+"</h4><button type=\"button\" class=\"btn btn-default btn-md bg-primary text-white\" style=\"margin-left: 65%\">Comprar</button> </div></div>");}
+            })
+        })
+    }
+</script>
+<!--fintros-->
+
+<!--Productos-->
+<div class="container" id="container">
+    <div class="card-columns" id="1" style="margin-top:3%;">
+
+    </div>
+</div>
+
+<script>
+    function cargaP(){
+        console.log(window.sessionStorage.getItem('log'));
+         $("#1").empty();
+        $.getJSON("Productos.json", function(productos){
+            $.each(productos["Productos"],function(idx,producto){
+               $("#1").append("<div class=\"card p-1\"><img src=\"" + producto["Dirfoto"] + "\"class=\"card-img-top\" alt=\"...\"><div class=\"card-body\"><h5 class=\"card-title\">" +producto["Nombre"]+"</h5><h4>"+producto["Precio"]+"$"+"</h4><button type=\"button\" class=\"btn btn-default btn-md bg-primary text-white\" style=\"margin-left: 65%\">Comprar</button> </div></div>");
+            })
+        })
+    }
+    
+</script>     
+<!--finprod-->
+
+<!--seccion: donde encontrarnos-->
+     <div class="container-fluid">
+        <div class ="row">
+        <div class="col">
+                <h5 class="card-title">¿Dónde encontrarnos?     <i class="fas fa-map-marked-alt"></i></h5>
+                <p class="card-text">Calle Jesús del Gran Poder, 16, 28909 Getafe, Madrid</p>
+        </div>
+         
+         <div class="col">
+                <h5 class="card-title">Contáctanos     <i class="fas fa-phone"></i></h5>
+                <p class="card-text">Tfno: 666666666</p>
+                <p class="card-text">email: peluqueria@peluqueria.es</p>
+        
+      </div>
+             <div class="col">
+                <h5 class="card-title">Horario    <i class="far fa-calendar-alt"></i></h5>
+                <p class="card-text">De lunes a viernes: de 9:00 a 21:00</p>
+                <p class="card-text">Sábados 9:00 a 13:00</p>
+        
+      </div>
+    </div>
+    </div>
+<!--fin de seccion: donde encontrarnos-->
+
+</div>
+</body>
+
+</html>
