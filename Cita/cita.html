@@ -37,7 +37,7 @@
 </head>
 
 <!--Aqui va el cuerpo de texto y la pagina en general-->
-<body>
+<body onload="iniP()">
 
 
 
@@ -142,8 +142,8 @@
 <div class="container mb-5 mt-5">
    <div class="container">
         <h2 class="text-center">Selección de servicios</h2>
-        <div id= "ListaServicios">
-            <p id="text-empty" class ="text-danger text-center"> Ningún servicio seleccionado</p>
+        <div id= "ListaServicios" class="container border border-dark rounded p-3 m-3">
+            
         </div>    
    </div>
        
@@ -154,21 +154,21 @@
             <tr>
               <th scope="row">Tinte Vegetal</th>
               <td>6$</td>
-              <td><i class="fas fa-plus-circle text-primary"></i></td>
-              <td><i class="fas fa-minus-circle text-danger"></i></td>
+              <td><i class="fas fa-plus-circle text-primary" onclick="add('tinte vegetal')"></i></td>
+              <td><i class="fas fa-minus-circle text-danger" onclick="deleted('tinte vegetal')"></i></td>
             </tr>
             
             <tr>
               <th scope="row">Tinte Permanente</th>
                <td>6$</td>
-              <td><i class="fas fa-plus-circle text-primary"></i></td>
-              <td><i class="fas fa-minus-circle text-danger"></i></td>
+              <td><i class="fas fa-plus-circle text-primary" onclick="add('tinte permanente')"></i></td>
+              <td><i class="fas fa-minus-circle text-danger" onclick="deleted('tinte permanente')"></i></td>
             </tr>
             <tr>
               <th scope="row">Mechas</th>
                <td>6$</td>
-              <td><i class="fas fa-plus-circle text-primary"></i></td>
-              <td><i class="fas fa-minus-circle text-danger"></i></td>
+              <td><i class="fas fa-plus-circle text-primary" onclick="add('mechas')"></i></td>
+              <td><i class="fas fa-minus-circle text-danger" onclick="deleted('mechas')"></i></td>
             </tr>
           </tbody>
         </table>
@@ -177,12 +177,60 @@
 </div>
 <!--finlr-->
 <script>
-    function add(add){ 
-        if($("#text-empty").length){
-            $("#text-empty").remove();
-            $("#ListaServicios").append("<p class=\"text-center text-danger\">"+ add + "   " + 1 +"</p>");
-        }
+    function iniP(){
+               var obj = {'servicios': []};
+               window.sessionStorage.setItem('servicios',JSON.stringify(obj));
+               parrafos();
+        
+        
     }
+    function add(add){ 
+             var obj = JSON.parse(window.sessionStorage.getItem('servicios'));
+             obj['servicios'].push(add);
+             window.sessionStorage.setItem('servicios',JSON.stringify(obj));
+             parrafos();
+    }
+    
+    function deleted(del){
+         var obj = JSON.parse(window.sessionStorage.getItem('servicios'));
+        if(obj['servicios'].indexOf(del)!=-1){
+         obj['servicios'].splice(obj['servicios'].indexOf(del),1);
+         window.sessionStorage.setItem('servicios',JSON.stringify(obj));
+            console.log(del +'eliminado');
+            parrafos();
+        }
+        
+    }
+    
+    function contar(e){
+        var obj = JSON.parse(window.sessionStorage.getItem('servicios'));
+        var n=0;
+         $.each(obj['servicios'],function(idx,servicio){
+             if(e.localeCompare(servicio)==0){
+                 n++;
+             }
+         })
+        return n;
+    }
+    function parrafos(){
+        var obj = JSON.parse(window.sessionStorage.getItem('servicios'));
+        $("#ListaServicios").empty();
+        
+        if(obj['servicios'].length==0){
+            $("#ListaServicios").append("<p id=\"text-empty\" class =\"text-danger text-center\"> Ningún servicio seleccionado</p>");
+        }
+        else{
+            $.each(obj['servicios'].unique(),function(idx,servicio){
+                    $("#ListaServicios").append("<p class=\"text-center text-danger\">"+ servicio + " " + contar(servicio) +"</p>"); 
+            })
+        }
+        
+      
+    }
+    
+    Array.prototype.unique=function(a){
+        return function(){return this.filter(a)}}(function(a,b,c){return c.indexOf(a,b+1)<0
+    });
 </script>
 <!--seccion: donde encontrarnos-->
      <div class="container-fluid">
