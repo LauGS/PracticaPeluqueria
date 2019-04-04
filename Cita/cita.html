@@ -23,9 +23,7 @@
     <!--enlaces de mmenu-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="jquery.mmenu.js"></script>
-    <script src="cogerDatos.js"  type="text/javascript" >
-
-    </script>
+    <script src="cogerDatos.js"  type="text/javascript" ></script>
     <link href="jquery.mmenu.css" rel="stylesheet">
     <style type="text/css">
       .mm-menu {
@@ -144,14 +142,14 @@
 <!--login/register-->
 <div class="container mb-5 mt-5 bg-light p-3">
         <h2 class="text-center m-4 mb-5">Selección de servicios</h2>
-   <form class="cita-form">
+   <form class="cita-form" id="miForm">
         <h3 class="text-center m-4 mb-5">Servicios de peluqueria</h3>
    <div class="row m-2">
           <div class="col">
               <h5>Tintes</h5>
           </div>
            <div class="col">
-             <select class="custom-control">
+             <select name="tinte" class="custom-control">
               <option selected>Ninguno</option>
               <option>Tinte Vegetal</option>
               <option>Tinte Permanente</option>
@@ -168,7 +166,7 @@
               <h5>Rizado</h5>
           </div>
            <div class="col">
-             <select class="custom-control" id="formrizos">
+             <select name="rizado" class="custom-control" id="formrizos">
               <option value="ninguno" selected>Ninguno</option>
               <option value="tinte vegetal">Permanente</option>
               <option value="tinte permanente">Moldeador</option>
@@ -184,7 +182,7 @@
               <h5>Cortes</h5>
           </div>
            <div class="col">
-             <select class="custom-control">
+             <select name="corte" class="custom-control">
               <option selected>Ninguno</option>
               <option>Corte navaja</option>
               <option>Corte tijera</option>
@@ -201,7 +199,7 @@
               <h5>Peinado</h5>
           </div>
            <div class="col">
-             <select class="custom-control">
+             <select name="peinado" class="custom-control">
               <option selected>Ninguno</option>
               <option>Peinado con secador y cepillo</option>
               <option>Peinado con secador y plancha</option>
@@ -274,7 +272,7 @@
     </form>
 </div>
 <!--finlr-->
-<script>
+<!--<script>
     $("#formtinte").change(function(){
       add($("#formtinte").val());
     })
@@ -331,7 +329,7 @@
     Array.prototype.unique=function(a){
         return function(){return this.filter(a)}}(function(a,b,c){return c.indexOf(a,b+1)<0
     });
-</script>
+</script>-->
 <!--seccion: donde encontrarnos-->
      <div class="container-fluid">
         <div class ="row">
