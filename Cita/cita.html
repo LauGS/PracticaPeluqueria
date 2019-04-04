@@ -33,11 +33,17 @@
           --mm-line-height:0px;
         }
    </style>
-
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 
 <!--Aqui va el cuerpo de texto y la pagina en general-->
 <body onload="iniP()">
+<style>
+    body{
+        background-image: url("../Imagenes/patron.jpg");
+    }
+</style>
 
 
 
@@ -137,9 +143,10 @@
 
 -->
 
- <h1 class="text-center" style="margin-top:3%; margin-bottom:3%;">Pedir Cita</h1>
+ 
 <!--login/register-->
 <div class="container mb-5 mt-5 bg-light p-3">
+       <h1 class="text-center" style="margin-top:3%; margin-bottom:3%;">Pedir Cita</h1>
         <h2 class="text-center m-4 mb-5">Selección de servicios</h2>         
    <form>
         <h3 class="text-center m-4 mb-5">Servicios de peluqueria</h3>
@@ -261,7 +268,20 @@
    </div>
    
     <hr>
-  
+       <h2 class="text-center m-4 mb-5">Fecha de la cita</h2>  
+      <div class="form-row">
+          <h5 class="p-3">Introduzca una fecha:</h5>
+          <input type="text" class="text" id="flat"></input>
+          <h5 class="p-3">Introduzca una hora:</h5>
+          <input type="text" class="text" id="time"></input>
+        <script>
+            $("#flat").flatpickr({
+                minDate: "today",
+                maxDate: new Date().fp_incr(14),
+                dateFormat: "d-m-y"// 14 days from now
+            });
+        </script> 
+      </div>        
     </form>  
 </div>
 <!--finlr-->
