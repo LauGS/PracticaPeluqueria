@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!--Aqui van los enlaces, metadatos y el titulo de la pagina-->
+
+<head>
+  <!--metadatos y titulo-->
+  <meta charset="utf-8">
+  <title>Peluqueria</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--enlaces de bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <!--enlaces de fontawesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+
+  <!--enlace al css y tipografias-->
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+  <!--enlaces de mmenu-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="jquery.mmenu.js"></script>
+  <link href="jquery.mmenu.css" rel="stylesheet">
+  <style type="text/css">
+    .mm-menu {
+      --mm-color-background: black;
+      --mm-color-border: white;
+      --mm-color-text: white;
+      --mm-color-button: white;
+      --mm-line-height: 0px;
+    }
+  </style>
+
+</head>
+
+<!--Aqui va el cuerpo de texto y la pagina en general-->
+
+<body>
+
+
+
+  <div id="my-page">
+    <div id="my-header">
+      <nav class="navbar navbar-expand-lg sticky-top">
+
+        <a class="navbar-brand" href="../index.html">Peluqueria</a>
+
+        <button id="my-button" class="navbar-toggler" type="button">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav mr-auto mm-nolistview">
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">PELUQUERIA</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../Peluqueria/tint.html">Tinte</a>
+                <a class="dropdown-item" href="../Peluqueria/perm.html">Permanente</a>
+                <a class="dropdown-item" href="../Peluqueria/cort.html">Corte</a>
+                <a class="dropdown-item" href="../Peluqueria/pein.html">Peinado</a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">ESTÉTICA</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../Estetica/dep.html">Depilación</a>
+                <a class="dropdown-item" href="../Estetica/man.html">Manicura</a>
+                <a class="dropdown-item" href="../Estetica/Limp.html">Limpieza</a>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../Tienda/tienda.html">TIENDA</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../Miperfil/perf.html">MI PERFIL <i class="fas fa-user"> </i> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CARRITO <i class="fas fa-shopping-cart"></i>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+      </nav>
+    </div>
+
+    <!--menu de movil
+  <div id="my-menu">
+      <ul id="my-ul">
+        <li><a href="#">PELUQUERIA</a><ul>
+          <li><a href="#">Tinte</a></li>
+          <li><a href="#">Permanente</a></li>
+          <li><a href="#">Corte</a></li>
+          <li><a href="#">Peinado</a></li>
+
+        </ul></li>
+
+        <li><a href="#">ESTÉTICA</a><ul>
+          <li><a href="#">Depilación</a></li>
+          <li><a href="#">Manicura</a></li>
+          <li><a href="#">Limpieza</a></li>
+
+        </ul></li>
+
+        <li><a href="#">TIENDA</a><ul>
+          <li><a href="#">Champú Hombre</a></li>
+          <li><a href="#">Champú Mujer</a></li>
+          <li><a href="#">Secador</a></li>
+          <li><a href="#">Plancha</a></li>
+          <li><a href="#">Crema</a></li>
+
+        </ul></li>
+        <li><a href="#">MI PERFIL</a></li>
+      </ul>
+  </div>
+
+
+  <script>
+     $(document).ready(function() {
+        $("#my-menu").mmenu({
+
+        });
+        var API = $("#my-menu").data( "mmenu" );
+
+        $("#my-button").click(function() {
+           API.open();
+        });
+     });
+  </script>
+-->
+ <!--info-->
+
+ <!-- 
+  <div class="container" style = "margin-top:3%; margin-bottom:3%;">
+    <div class ="row">
+        <div class = "col-md">
+            <img src="../Imagenes/tinte.jpg" class= "img-fluid">
+        </div>
+        <div class = "col-md" style="text-align: justify;">
+           <h1>Tinte Permanente</h1>
+            <p>El tinte o tintura es una sustancia con la que se da color a un objeto (usualmente tejido, ropa, cabello, pintura, alimento...) sobre el que ya tenía. Aunque existen multitud de tintes naturales,1 la mayoría de los tintes usados hoy en día contienen productos químicos. Los tintes capilares se dividen en oxidantes y no oxidantes. Generalmente se aplica en una solución acuosa con un mordiente que facilita la fijación del tinte en la fibra.
+
+Los tintes y los pigmentos son colorantes porque absorben solo algunas longitudes de onda de la luz visible. Los tintes generalmente son solubles en agua, mientras que los pigmentos son insolubles.
+
+Los tintes contienen una variedad de elementos, como agua desmineralizada, alcohol cetílico, proteína de trigo, aloe vera, extracto de miel, sodio, fragancia, amoníaco. </p>
+        </div>
+    </div>  
+  </div>
+   <div class="container">
+      <hr class="bg-dark">
+  </div>
+  -->
+  <div class="container" style = "margin-top:3%; margin-bottom:3%;">
+    <div class ="row">
+        <div class = "col-md">
+            <img src="../Imagenes/rizos.jpg" class= "img-fluid">
+        </div>
+        <div class = "col-md" style="text-align: justify;">
+           <h1>Permanente Rizado</h1>
+            <p>Las ondulaciones permanentes se realizan con barras de ondulación grandes que se usan en la permanente normal porque se quieren marcar grandes ondas y algunos rizos sueltos. No tiene nada que ver con las permanentes tradicionales porque en estas últimas se busca un rizo consistente y delicado por todo el pelo de la mujer. </p>
+        </div>
+    </div>  
+  </div>
+  <div class="container">
+      <hr class="bg-dark">
+  </div>
+  
+  <div class="container" style = "margin-top:3%; margin-bottom:3%;">
+    <div class ="row">
+        <div class = "col-md">
+            <img src="../Imagenes/liso.jpg" class= "img-fluid">
+        </div>
+        <div class = "col-md" style="text-align: justify;">
+           <h1>Permanente Liso</h1>
+            <p> Uno de los más demandados. Este alisado permanente tiene muchas ventajas y proporciona un alisado perfecto. La principal ventaja es su acabado sedoso y liso y su perdurabilidad, pudiendo estar varios meses, incluso un año en ciertos tipos de pelo. </p>
+        </div>
+    </div>  
+  </div>
+  
+  
+  
+  
+  <!--finfo-->
+<!--span-->
+<div class = "container rounded" style="background-color:lightgrey; margin-top:5%; height:auto; margin-bottom:3%; padding:3%;">
+    <div class = "row h-30">
+        <div class = "col-3">
+            <img src="../Imagenes/date-to-icon-27853.png" class="img-fluid">
+        </div>
+        
+        <div class="col-md" style="padding-top:3%;" style="text-align:center;">
+            <h1>¿Quieres pedir cita?</h1>
+            <p>Pide cita en nuestra peluquería para obtener una de las mejores atenciones del mercado.</p>
+        </div>
+        <div class="col-1" style="padding-top:5%;">
+            <a href="#" class="btn btn-primary">Ir</a>
+        </div>
+    </div>
+</div>
+<!--finspan-->
+<!--seccion: donde encontrarnos-->
+     <div class="container-fluid">
+        <div class ="row">
+        <div class="col">
+                <h5 class="card-title">¿Dónde encontrarnos?     <i class="fas fa-map-marked-alt"></i></h5>
+                <p class="card-text">Calle Jesús del Gran Poder, 16, 28909 Getafe, Madrid</p>
+        </div>
+         
+         <div class="col">
+                <h5 class="card-title">Contáctanos     <i class="fas fa-phone"></i></h5>
+                <p class="card-text">Tfno: 666666666</p>
+                <p class="card-text">email: peluqueria@peluqueria.es</p>
+        
+      </div>
+             <div class="col">
+                <h5 class="card-title">Horario    <i class="far fa-calendar-alt"></i></h5>
+                <p class="card-text">De lunes a viernes: de 9:00 a 21:00</p>
+                <p class="card-text">Sábados 9:00 a 13:00</p>
+        
+      </div>
+    </div>
+    </div>
+<!--fin de seccion: donde encontrarnos-->
+</body>
+
+</html>
