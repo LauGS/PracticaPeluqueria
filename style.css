@@ -19,7 +19,7 @@ a.navbar-brand{
     background-color: black;
     color:white;
     border-bottom: 2px solid black;
-    
+
 }
 .nav-link{
     font-size: 20px;
@@ -73,7 +73,7 @@ i.fa-bars{
 }
 .card-deck{
     padding:5%;
-    
+
 }
 
 .carousel{
@@ -84,7 +84,7 @@ i.fa-bars{
 .card-colored{
     background-color: lightblue;
     margin-top:5%;
-   
+
 }
 .container-fluid{
     background-color: black;
@@ -100,4 +100,9 @@ i.fa-bars{
 }
 .fa-minus-circle{
     font-size:30px;
+}
+
+.col{
+  margin: auto;
+  text-align: center;
 }
