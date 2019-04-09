@@ -166,9 +166,9 @@
            <div class="col">
              <select name="tinte" class="custom-control" id="formtinte">
               <option selected value="ninguno">Ninguno</option>
-              <option value="tintev">Tinte Vegetal</option>
-              <option value="tintep">Tinte Permanente</option>
-              <option value="mechas">Mechas</option>
+              <option value="Tinte vegetal">Tinte Vegetal</option>
+              <option value="Tinte permanente">Tinte Permanente</option>
+              <option value="Mechas">Mechas</option>
             </select>
         </div>
         <div class="col m-2" id ="preciot" >0$</div>
@@ -183,8 +183,8 @@
            <div class="col">
              <select name="rizado" class="custom-control" id="formrizos">
               <option value="ninguno" selected >Ninguno</option>
-              <option value="permanente">Permanente</option>
-              <option value="moldeador">Moldeador</option>
+              <option value="Permanente">Permanente</option>
+              <option value="Moldeador">Moldeador</option>
             </select>
         </div>
         <div class="col m-2" id ="precior" >0$</div>
@@ -199,9 +199,9 @@
            <div class="col">
              <select name="corte" class="custom-control" id="formcorte">
               <option selected value="ninguno">Ninguno</option>
-              <option value="corten">Corte navaja</option>
-              <option value ="cortet">Corte tijera</option>
-              <option value="cortem">Corte maquinilla</option>
+              <option value="Corte con navaja">Corte navaja</option>
+              <option value ="Corte con tijera">Corte tijera</option>
+              <option value="Corte con maquinilla">Corte maquinilla</option>
             </select>
         </div>
         <div class="col m-2" id ="precioc" >0$</div>
@@ -216,9 +216,9 @@
            <div class="col">
              <select name="peinado" class="custom-control" id="formpeinado">
               <option selected value="ninguno">Ninguno</option>
-              <option value="peinadosc">Peinado con secador y cepillo</option>
-              <option value="peinadosp">Peinado con secador y plancha</option>
-              <option value="peinadop">Peinado con productos</option>
+              <option value="Peinado con secador y cepillo">Peinado con secador y cepillo</option>
+              <option value="Peinado con secador y plancha">Peinado con secador y plancha</option>
+              <option value="Peinado con productos">Peinado con productos</option>
             </select>
         </div>
         <div class="col m-2" id ="preciop" >0$</div>
@@ -233,9 +233,9 @@
            <div class="col">
              <select class="custom-control" id="formdep">
               <option selected value="ninguno">Ninguno</option>
-              <option value="depilaciona">Depilación de axilas</option>
-              <option value="depilacionp">Depilación de piernas</option>
-              <option value="depilacioni">Depilación de ingles</option>
+              <option value="Depilacion de axilas">Depilación de axilas</option>
+              <option value="Depilacion de piernas">Depilación de piernas</option>
+              <option value="Depilacion de ingles">Depilación de ingles</option>
             </select>
         </div>
         <div class="col m-2" id ="preciod" >0$</div>
@@ -250,9 +250,9 @@
            <div class="col">
              <select class="custom-control" id="formman">
               <option selected value="ninguno">Ninguno</option>
-              <option value="manos">Manos</option>
-              <option value="pies">Pies</option>
-              <option value="manosp">Manos y pies</option>
+              <option value="Manos">Manos</option>
+              <option value="Pies">Pies</option>
+              <option value="Manos y pies">Manos y pies</option>
             </select>
         </div>
         <div class="col m-2" id ="preciom" >0$</div>
@@ -267,10 +267,10 @@
            <div class="col">
              <select class="custom-control" id="formlimp">
               <option selected value="ninguno">Ninguno</option>
-              <option value="limpiezaf">Limpieza facial</option>
-              <option value="radiofrecuencia">Radiofrecuencia</option>
-              <option value="ionizacion">Ionización</option>
-              <option value="peeling">Peeling</option>
+              <option value="Limpieza facial">Limpieza facial</option>
+              <option value="Radiofrecuencia">Radiofrecuencia</option>
+              <option value="Ionizacion">Ionización</option>
+              <option value="Peeling">Peeling</option>
             </select>
         </div>
         <div class="col m-2" id ="preciol" >0$</div>
@@ -312,7 +312,7 @@
 
     <div class="row m-2">
           <div class="col">
-              <input type="submit" value="Confirmar cita">
+              <button class="btn" onclick="location.href='cita2.html'">Confirmar cita</button>
           </div>
    </div>
 
@@ -345,7 +345,7 @@
     
      $("#hora").change(function(){
          var fecha = JSON.parse(window.sessionStorage.getItem('fecha'));
-         fecha[1] = $('#hora').val();
+         fecha[1] = $("#hora option:selected").text();
          window.sessionStorage.setItem('fecha',JSON.stringify(fecha));
      })
       $("#flat").change(function(){
@@ -526,7 +526,7 @@
          //hora 1
          
          var servicio = ['-1','-1','-1','-1','-1','-1','-1'];
-         var fecha = ['-1','-1'];
+         var fecha = ['-1','9:00'];
          window.sessionStorage.setItem('servicios',JSON.stringify(servicio));
          window.sessionStorage.setItem('fecha',JSON.stringify(fecha));
     }
