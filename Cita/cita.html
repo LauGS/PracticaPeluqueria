@@ -322,7 +322,6 @@
 
 </div>
 <script>
-    var tintev = "tintev";
      $("#formtinte").change(function(){
         if($("#formtinte").val()=='tintev'){
                 $("#preciot").text("12$");
@@ -340,7 +339,23 @@
                 $("#preciot").text("0$");
 
         }
+         
+        if($("#formtinte").val()!='ninguno'){
+            add(0,$("#formtinte").val());
+        }
     })
+    
+     $("#hora").change(function(){
+         var fecha = JSON.parse(window.sessionStorage.getItem('fecha'));
+         fecha[1] = $('#hora').val();
+         window.sessionStorage.setItem('fecha',JSON.stringify(fecha));
+     })
+      $("#flat").change(function(){
+         var fecha = JSON.parse(window.sessionStorage.getItem('fecha'));
+         fecha[0] = $('#flat').val();
+         window.sessionStorage.setItem('fecha',JSON.stringify(fecha));
+     })
+
 
        $("#formrizos").change(function(){
         if($("#formrizos").val()=='ninguno'){
@@ -355,6 +370,11 @@
                 $("#precior").text("20$");
 
         }
+
+        if($("#formrizos").val()!='ninguno'){
+            add(1,$("#formrizos").val());
+        }   
+
     })
 
        $("#formcorte").change(function(){
@@ -374,6 +394,12 @@
                 $("#precioc").text("15$");
 
         }
+
+           
+        if($("#formcorte").val()!='ninguno'){
+            add(2,$("#formcorte").val());
+        }
+
     })
 
        $("#formpeinado").change(function(){
@@ -391,6 +417,12 @@
         }
         if($("#formpeinado").val()=='ninguno'){
                 $("#preciop").text("0$");
+
+
+        } 
+           
+        if($("#formpeinado").val()!='ninguno'){
+            add(3,$("#formpeinado").val());
 
         }
     })
@@ -414,7 +446,14 @@
                 $("#preciod").text("0$");
 
         }
-        })
+
+        
+        if($("#formdep").val()!='ninguno'){
+            add(4,$("#formdep").val());
+        }
+        }) 
+    
+
 
         $("#formman").change(function(){
         if($("#formman").val()=='manos'){
@@ -433,7 +472,14 @@
                 $("#preciom").text("0$");
 
         }
-         })
+
+        
+        if($("#formman").val()!='ninguno'){
+            add(5,$("#formman").val());
+        }
+         }) 
+ 
+
 
         $("#formlimp").change(function(){
         if($("#formlimp").val()=='limpiezaf'){
@@ -457,18 +503,40 @@
 
         }
 
+        if($("#formlimp").val()!='ninguno'){
+            add(6,$("#formlimp").val());
+        }
+             
     })
+    
 
      function iniP(){
-               var obj = [{'tinte': "tinte"},{'corte': " "},{'rizado': " "},{'peinado': " "}, {'depilacion': " "}, {'limpieza': " "}, {'manicura': " "}];
-               window.sessionStorage.setItem('servicios',JSON.stringify(obj));
-               add('tinte','tintev');
+         // array posiciones
+         
+         
+         //tinte 0
+         //corte 1
+         //rizado 2
+         //peinado 3
+         //depilacion 4
+         //limpieza 5
+         //manicura 6
+         
+         //fecha
+         
+         //dia 0
+         //hora 1
+         
+         var servicio = ['-1','-1','-1','-1','-1','-1','-1'];
+         var fecha = ['-1','-1'];
+         window.sessionStorage.setItem('servicios',JSON.stringify(servicio));
+         window.sessionStorage.setItem('fecha',JSON.stringify(fecha));
     }
      function add(tipo,objeto){
-             var obj = JSON.parse(window.sessionStorage.getItem('servicios'));
-             alert(JSON.stringify(obj[]));
-             window.sessionStorage.setItem('servicios',JSON.stringify(obj));
-             alert(JSON.stringify(obj));
+              
+             var servicio = JSON.parse(window.sessionStorage.getItem('servicios'));
+             servicio[tipo] = objeto ;
+             window.sessionStorage.setItem('servicios',JSON.stringify(servicio));
     }
 </script>
 <!--finlr-->
