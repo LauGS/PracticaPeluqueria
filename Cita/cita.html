@@ -252,9 +252,9 @@
            <div class="col">
              <select class="custom-control" id="formman">
               <option selected value="ninguno">Ninguno</option>
-              <option value="Manos">Manos</option>
-              <option value="Pies">Pies</option>
-              <option value="Manos y pies">Manos y pies</option>
+              <option value="Manicura">Manos</option>
+              <option value="Pedicura">Pies</option>
+              <option value="Manicura y pedicura">Manos y pies</option>
             </select>
         </div>
         <div class="col m-2" id ="preciom" >0$</div>
@@ -323,15 +323,16 @@
 </div>
 <script>
      $("#formtinte").change(function(){
-        if($("#formtinte").val()=='tintev'){
+         console.log("cambio1");
+        if($("#formtinte").val()=='Tinte vegetal'){
                 $("#preciot").text("12$");
 
         }
-        if($("#formtinte").val()=='tintep'){
+        if($("#formtinte").val()=='Tinte permanente'){
                 $("#preciot").text("15$");
 
         }
-        if($("#formtinte").val()=='mechas'){
+        if($("#formtinte").val()=='Mechas'){
                 $("#preciot").text("20$");
 
         }
@@ -339,7 +340,6 @@
                 $("#preciot").text("0$");
 
         }
-         
         if($("#formtinte").val()!='ninguno'){
             add(0,$("#formtinte").val());
         }
@@ -362,11 +362,11 @@
                 $("#precior").text("0$");
 
         }
-        if($("#formrizos").val()=='permanente'){
+        if($("#formrizos").val()=='Permanente'){
                 $("#precior").text("15$");
 
         }
-        if($("#formrizos").val()=='moldeador'){
+        if($("#formrizos").val()=='Moldeador'){
                 $("#precior").text("20$");
 
         }
@@ -382,15 +382,15 @@
                 $("#precioc").text("0$");
 
         }
-        if($("#formcorte").val()=='corten'){
+        if($("#formcorte").val()=='Corte con navaja'){
                 $("#precioc").text("12$");
 
         }
-        if($("#formcorte").val()=='cortem'){
+        if($("#formcorte").val()=='Corte con maquinilla'){
                 $("#precioc").text("10$");
 
         }
-        if($("#formcorte").val()=='cortet'){
+        if($("#formcorte").val()=='Corte con tijera'){
                 $("#precioc").text("15$");
 
         }
@@ -403,15 +403,15 @@
     })
 
        $("#formpeinado").change(function(){
-        if($("#formpeinado").val()=='peinadosc'){
+        if($("#formpeinado").val()=='Peinado con secador y cepillo'){
                 $("#preciop").text("15$");
 
         }
-        if($("#formpeinado").val()=='peinadosp'){
+        if($("#formpeinado").val()=='Peinado con secador y plancha'){
                 $("#preciop").text("20$");
 
         }
-        if($("#formpeinado").val()=='peinadop'){
+        if($("#formpeinado").val()=='Peinado con productos'){
                 $("#preciop").text("25$");
 
         }
@@ -430,15 +430,15 @@
     ////ESTETICA
 
        $("#formdep").change(function(){
-        if($("#formdep").val()=='depilaciona'){
+        if($("#formdep").val()=='Depilacion de axilas'){
                 $("#preciod").text("20$");
 
         }
-        if($("#formdep").val()=='depilacionp'){
+        if($("#formdep").val()=='Depilacion de piernas'){
                 $("#preciod").text("20$");
 
         }
-        if($("#formdep").val()=='depilacioni'){
+        if($("#formdep").val()=='Depilacion de ingles'){
                 $("#preciod").text("32$");
 
         }
@@ -456,15 +456,15 @@
 
 
         $("#formman").change(function(){
-        if($("#formman").val()=='manos'){
+        if($("#formman").val()=='Manicura'){
                 $("#preciom").text("10$");
 
         }
-        if($("#formman").val()=='pies'){
+        if($("#formman").val()=='Pedicura'){
                 $("#preciom").text("12$");
 
         }
-        if($("#formman").val()=='manosp'){
+        if($("#formman").val()=='Manicura y pedicura'){
                 $("#preciom").text("20$");
 
         }
@@ -482,15 +482,15 @@
 
 
         $("#formlimp").change(function(){
-        if($("#formlimp").val()=='limpiezaf'){
+        if($("#formlimp").val()=='Limpieza facial'){
                 $("#preciol").text("15$");
 
         }
-        if($("#formlimp").val()=='ionizacion'){
+        if($("#formlimp").val()=='Ionizacion'){
                 $("#preciol").text("35$");
 
         }
-        if($("#formlimp").val()=='radiofrecuencia'){
+        if($("#formlimp").val()=='Radiofrecuencia'){
                 $("#preciol").text("40$");
 
         }
@@ -498,7 +498,7 @@
                 $("#preciol").text("0$");
 
         }
-        if($("#formlimp").val()=='peeling'){
+        if($("#formlimp").val()=='Peeling'){
                 $("#preciol").text("25$");
 
         }
