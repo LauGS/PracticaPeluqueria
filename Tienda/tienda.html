@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="../style.css">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <!--enlaces de mmenu-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -46,7 +46,9 @@
     <div id="my-header">
     <nav class="navbar navbar-expand-lg sticky-top">
 
-        <a class="navbar-brand" href="../index.html">Peluqueria</a>
+      <a class="navbar-brand" href="../index.html">
+       <img class="logo" border="0" alt="Logo peluqueria" src="../Imagenes/logo.jpg">
+      </a>
 
         <button id="my-button" class="navbar-toggler" type="button">
           <i class="fas fa-bars"></i>
@@ -77,7 +79,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="tienda.html">TIENDA</a>
                 </li>
-                
+
                 <li class="nav-item">
                     <a class="nav-link" href="Miperfil/perf.html">MI PERFIL   <i class="fas fa-user">  </i>  </a>
                 </li>
@@ -153,21 +155,21 @@
     </button>
     <button onclick="mostrarChampusH()" class="btn bg-secondary text-white m-2">
         Champús de Hombre
-    </button>  
+    </button>
     <button onclick="mostrarChampusM()" class="btn bg-secondary text-white m-2">
         Champús de Mujer
-    </button> 
+    </button>
     <button onclick="mostrarSecadores()" class="btn bg-secondary text-white m-2">
         Secadores
-    </button> 
+    </button>
     <button onclick="mostrarPlanchas()" class="btn bg-secondary text-white m-2">
         Planchas para el pelo
     </button>
     <button onclick="mostrarCremas()" class="btn bg-secondary text-white m-2">
         Cremas
-    </button>   
+    </button>
  </div>
- 
+
 <script>
     function mostrarChampusH(){
         console.log("click");
@@ -180,7 +182,7 @@
             })
         })
     }
-    
+
     function mostrarChampusM(){
         console.log("click");
         $("#1").empty();
@@ -192,7 +194,7 @@
             })
         })
     }
-    
+
     function mostrarSecadores(){
         console.log("click");
         $("#1").empty();
@@ -204,7 +206,7 @@
             })
         })
     }
-    
+
     function mostrarPlanchas(){
         console.log("click");
         $("#1").empty();
@@ -216,7 +218,7 @@
             })
         })
     }
-    
+
     function mostrarCremas(){
         console.log("click");
         $("#1").empty();
@@ -248,8 +250,8 @@
             })
         })
     }
-    
-</script>     
+
+</script>
 <!--finprod-->
 
 <!--seccion: donde encontrarnos-->
@@ -259,18 +261,18 @@
                 <h5 class="card-title">¿Dónde encontrarnos?     <i class="fas fa-map-marked-alt"></i></h5>
                 <p class="card-text">Calle Jesús del Gran Poder, 16, 28909 Getafe, Madrid</p>
         </div>
-         
+
          <div class="col">
                 <h5 class="card-title">Contáctanos     <i class="fas fa-phone"></i></h5>
                 <p class="card-text">Tfno: 666666666</p>
                 <p class="card-text">email: peluqueria@peluqueria.es</p>
-        
+
       </div>
              <div class="col">
                 <h5 class="card-title">Horario    <i class="far fa-calendar-alt"></i></h5>
                 <p class="card-text">De lunes a viernes: de 9:00 a 21:00</p>
                 <p class="card-text">Sábados 9:00 a 13:00</p>
-        
+
       </div>
     </div>
     </div>

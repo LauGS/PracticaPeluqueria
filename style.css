@@ -14,12 +14,19 @@ body {
 }
 
 a.navbar-brand{
-    margin-left:5%;
-    color:black;
     background-color: white;
-    font-family: 'Pacifico', cursive;
-
+    display: block;
+    margin-left: 20px;
+    margin-right: auto;
 }
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+
+
 .navbar{
     background-color: white;
     color: #898989;
@@ -120,7 +127,7 @@ i.fa-bars{
   text-align: center;
 }
 h1{
-    font-family: 'Abril Fatface', cursive;
+    font: 200 40px 'Open Sans Condensed', sans-serif;
 }
 h2{
     font-family: 'Abril Fatface', cursive;
