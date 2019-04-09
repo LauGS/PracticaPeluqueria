@@ -84,7 +84,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="Miperfil/perf.html">MI PERFIL   <i class="fas fa-user">  </i>  </a>
+                    <a class="nav-link" href="../Miperfil/perf.html">MI PERFIL   <i class="fas fa-user">  </i>  </a>
                 </li>
                  <li class="nav-item">
                     <a class="nav-link" href="#" id ="carro">CARRITO<i class="fas fa-shopping-cart"></i></a>
@@ -180,7 +180,9 @@
         $.getJSON("Productos.json", function(productos){
             $.each(productos["Productos"],function(idx,producto){
              if(n.localeCompare(producto["Tipo"])==0){
+
                $("#1").append("<div class=\"card p-1\"><img src=\"" + producto["Dirfoto"] + "\"class=\"card-img-top\" alt=\"...\"><div class=\"card-body\"><h5 class=\"card-title\">" +producto["Nombre"]+"</h5><h4>"+producto["Precio"] +"$"+'</h4><button class="btn m-3" onclick="addCart(' + producto['ID'] + ')">Comprar</button></div></div>');}
+
             })
         })
     }
@@ -192,7 +194,9 @@
         $.getJSON("Productos.json", function(productos){
             $.each(productos["Productos"],function(idx,producto){
              if(n.localeCompare(producto["Tipo"])==0){
+
                $("#1").append("<div class=\"card p-1\"><img src=\"" + producto["Dirfoto"] + "\"class=\"card-img-top\" alt=\"...\"><div class=\"card-body\"><h5 class=\"card-title\">" +producto["Nombre"]+"</h5><h4>"+producto["Precio"]+"$"+'</h4><button class="btn m-3" onclick="addCart(' + producto['ID'] + ')">Comprar</button></div></div>');}
+
             })
         })
     }
@@ -204,7 +208,9 @@
         $.getJSON("Productos.json", function(productos){
             $.each(productos["Productos"],function(idx,producto){
              if(n.localeCompare(producto["Tipo"])==0){
+
                $("#1").append("<div class=\"card p-1\"><img src=\"" + producto["Dirfoto"] + "\"class=\"card-img-top\" alt=\"...\"><div class=\"card-body\"><h5 class=\"card-title\">" +producto["Nombre"]+"</h5><h4>"+producto["Precio"]+"$"+'</h4><button class="btn m-3" onclick="addCart(' + producto['ID'] + ')">Comprar</button></div></div>');}
+
             })
         })
     }
@@ -216,7 +222,9 @@
         $.getJSON("Productos.json", function(productos){
             $.each(productos["Productos"],function(idx,producto){
              if(n.localeCompare(producto["Tipo"])==0){
+
                $("#1").append("<div class=\"card p-1\"><img src=\"" + producto["Dirfoto"] + "\"class=\"card-img-top\" alt=\"...\"><div class=\"card-body\"><h5 class=\"card-title\">" +producto["Nombre"]+"</h5><h4>"+producto["Precio"]+"$"+'</h4><button class="btn m-3" onclick="addCart(' + producto['ID'] + ')">Comprar</button></div></div>');}
+
             })
         })
     }
@@ -228,7 +236,9 @@
         $.getJSON("Productos.json", function(productos){
             $.each(productos["Productos"],function(idx,producto){
              if(n.localeCompare(producto["Tipo"])==0){
+
                $("#1").append("<div class=\"card p-1\"><img src=\"" + producto["Dirfoto"] + "\"class=\"card-img-top\" alt=\"...\"><div class=\"card-body\"><h5 class=\"card-title\">" +producto["Nombre"]+"</h5><h4>"+producto["Precio"]+"$"+'</h4><button class="btn m-3" onclick="addCart(' + producto['ID'] + ')">Comprar</button></div></div>');}
+
             })
         })
     }
@@ -254,7 +264,10 @@
         $("#1").empty();
         $.getJSON("Productos.json", function(productos){
             $.each(productos["Productos"],function(idx,producto){
+
                $("#1").append("<div class=\"card p-1\"><img src=\"" + producto["Dirfoto"] + "\"class=\"card-img-top\" alt=\"...\"><div class=\"card-body\"><h5 class=\"card-title\">" +producto["Nombre"]+"</h5><h4>"+producto["Precio"]+"$"+'</h4><button class="btn m-3" onclick="addCart(' + producto['ID'] + ')">Comprar</button></div></div>');
+
+
             })
         })
     }
