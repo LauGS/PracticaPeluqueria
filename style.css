@@ -29,6 +29,10 @@ a.navbar-brand{
   height: auto;
 }
 
+.navbar-toggler{
+  color: black;
+}
+
 .navbar{
     background-color: white;
     color: #898989;
@@ -96,7 +100,7 @@ i{
   font-size:17px;
 }
 i.fa-bars{
-  color:white;
+  color: #898989;
 }
 .card-deck{
     padding:5%;
