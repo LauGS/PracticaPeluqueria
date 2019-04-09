@@ -19,8 +19,11 @@
     <link rel="stylesheet" type="text/css" href="../style.css">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 
     <!--enlaces de mmenu-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -302,9 +305,9 @@
                 dateFormat: "d-m-y"// 14 days from now
             });
         </script>
-           
+
        </div>
-      
+
       </div>
     </form>
 
@@ -336,9 +339,9 @@
         if($("#formtinte").val()=='ninguno'){
                 $("#preciot").text("0$");
 
-        }     
+        }
     })
-    
+
        $("#formrizos").change(function(){
         if($("#formrizos").val()=='ninguno'){
                 $("#precior").text("0$");
@@ -351,9 +354,9 @@
         if($("#formrizos").val()=='moldeador'){
                 $("#precior").text("20$");
 
-        }     
+        }
     })
-    
+
        $("#formcorte").change(function(){
         if($("#formcorte").val()=='ninguno'){
                 $("#precioc").text("0$");
@@ -370,9 +373,9 @@
         if($("#formcorte").val()=='cortet'){
                 $("#precioc").text("15$");
 
-        }     
+        }
     })
-    
+
        $("#formpeinado").change(function(){
         if($("#formpeinado").val()=='peinadosc'){
                 $("#preciop").text("15$");
@@ -389,11 +392,11 @@
         if($("#formpeinado").val()=='ninguno'){
                 $("#preciop").text("0$");
 
-        }     
+        }
     })
-    
+
     ////ESTETICA
-    
+
        $("#formdep").change(function(){
         if($("#formdep").val()=='depilaciona'){
                 $("#preciod").text("20$");
@@ -411,8 +414,8 @@
                 $("#preciod").text("0$");
 
         }
-        }) 
-    
+        })
+
         $("#formman").change(function(){
         if($("#formman").val()=='manos'){
                 $("#preciom").text("10$");
@@ -429,9 +432,9 @@
         if($("#formman").val()=='ninguno'){
                 $("#preciom").text("0$");
 
-        }     
-         }) 
-    
+        }
+         })
+
         $("#formlimp").change(function(){
         if($("#formlimp").val()=='limpiezaf'){
                 $("#preciol").text("15$");
@@ -453,9 +456,9 @@
                 $("#preciol").text("25$");
 
         }
-             
+
     })
-    
+
      function iniP(){
                var obj = [{'tinte': "tinte"},{'corte': " "},{'rizado': " "},{'peinado': " "}, {'depilacion': " "}, {'limpieza': " "}, {'manicura': " "}];
                window.sessionStorage.setItem('servicios',JSON.stringify(obj));

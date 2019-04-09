@@ -9,6 +9,10 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
+label{
+  font: 400 20px 'Open Sans Condensed', sans-serif;
+}
+
 body {
     margin: 0;
 }
@@ -24,8 +28,6 @@ a.navbar-brand{
   width: 150px;
   height: auto;
 }
-
-
 
 .navbar{
     background-color: white;
@@ -84,6 +86,11 @@ a.dropdown-item:hover{
     border-bottom: 2px solid white;
     background-color:white;
 }
+
+a.registro {
+  font: 400 20px 'Open Sans Condensed', sans-serif;
+}
+
 i{
   text-align: center;
   font-size:17px;
@@ -130,8 +137,9 @@ h1{
     font: 200 40px 'Open Sans Condensed', sans-serif;
 }
 h2{
-    font-family: 'Abril Fatface', cursive;
-}
+    font: 400 35px 'Open Sans Condensed', sans-serif;
+  }
+
 h5{
     font: 600 23px 'Open Sans Condensed', sans-serif;
 }
@@ -152,14 +160,16 @@ p{
   background-color: white;
   color: black;
   border: 2px solid #555555;
+  font: 200 20px 'PT Sans', sans-serif;
 }
 
 .btn:hover {
   background-color: #555555;
   color: white;
+  font: 200 20px 'PT Sans', sans-serif;
 }
 
 .card{
     border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
