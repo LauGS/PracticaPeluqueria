@@ -170,13 +170,87 @@
         
     var servicio = JSON.parse(window.sessionStorage.getItem('servicios'));
     var fecha = JSON.parse(window.sessionStorage.getItem('fecha'));
-
+    var precio=0;
+    var total=0;
     for(var i=0; i< servicio.length; i++){
         if(servicio[i]!='-1'){
-            $("#cita").append("<p class='text-danger pl-5'><i class='fas fa-angle-right text-danger'></i>  "+ servicio[i] +"<p>");
+            //tinte
+            if(servicio[i]=='Tinte vegetal'){
+                precio = 12;
+            }
+             if(servicio[i]=='Tinte permanente'){
+                precio = 15;
+            }
+             if(servicio[i]=='Mechas'){
+                precio = 20;
+            }
+            //rizado
+             if(servicio[i]=='Permanente'){
+                precio = 15;
+            }
+             if(servicio[i]=='Moldeador'){
+                precio = 20;
+            }
+            //cortes
+             if(servicio[i]=='Corte con navaja'){
+                precio = 12;
+            }
+             if(servicio[i]=='Corte con maquinilla'){
+                precio = 10;
+            }
+             if(servicio[i]=='Corte con tijera'){
+                precio = 15;
+            }
+            //peinado
+             if(servicio[i]=='Peinado con secador y cepillo'){
+                precio = 15;
+            }
+             if(servicio[i]=='Peinado con secador y plancha'){
+                precio = 20;
+            }
+             if(servicio[i]=='Peinado con productos'){
+               precio = 25;
+            }
+            //depilacion
+             if(servicio[i]=='Depilacion de axilas'){
+                precio = 20;
+            }
+             if(servicio[i]=='Depilacion de piernas'){
+                precio = 20;
+            }
+             if(servicio[i]=='Depilacion de ingles'){
+                precio = 32;
+            }
+            //limpieza
+             if(servicio[i]=='Ionizacion'){
+                precio = 35;
+            }
+             if(servicio[i]=='Radiofrecuencia'){
+                precio = 40;
+            }
+             if(servicio[i]=='Limpieza facial'){
+                precio = 15;
+            }
+             if(servicio[i]=='Peeling'){
+                precio = 25;
+            }
+            //manicura
+             if(servicio[i]=='Manicura'){
+                precio = 10;
+            }
+            if(servicio[i]=='Pedicura'){
+                precio = 12;
+            }
+            if(servicio[i]=='Manicura y pedicura'){
+                precio = 20;
+            }
+            total+=precio;
+        }
+        if(servicio[i]!='-1'){
+            $("#cita").append("<p class='text-danger pl-5'><i class='fas fa-angle-right text-danger'></i>  "+ servicio[i] + " " + precio + "$<p>");
         }
     }
-        
+    $("#cita").append("<hr><p class='text-danger pl-5'>TOTAL= " + total +"$");   
     $("#cita").append("<br><p class='pl-3'> A las "+ fecha[1] +" del dia " + fecha[0] + "<p>");
         
     }
