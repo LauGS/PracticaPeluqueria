@@ -220,3 +220,7 @@ p{
   margin:auto;
   text-align:center;
 }
+#eliminar:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
