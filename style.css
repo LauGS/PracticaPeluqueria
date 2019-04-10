@@ -202,3 +202,21 @@ p{
   color: white;
   font: 200 20px 'PT Sans', sans-serif;
   }
+
+#my-menu {
+    --mm-color-background: white;
+    --mm-color-border: #898989;
+    --mm-color-text: #898989;
+    --mm-color-button: #898989;
+    --mm-line-height: 0px;
+}
+
+#my-ul {
+  margin:auto;
+  text-align:center;
+}
+
+.mm-listitem__text {
+  margin:auto;
+  text-align:center;
+}
