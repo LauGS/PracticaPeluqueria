@@ -106,6 +106,7 @@
         </div>
 
       </nav>
+      <div id= "log"></div>
     </div>
     <script>
       function carga() {
@@ -117,6 +118,7 @@
           $("#miperfil").attr("href", "Miperfil/log.html");
         } else {
           $("#miperfil").attr("href", "Miperfil/perf.html");
+            $("#log").append("<div style='color:white;background-color:black;display:block; text-align:center'>Hola " + sessionStorage.getItem('nombre') + "!</div>");
         }
       }
     </script>

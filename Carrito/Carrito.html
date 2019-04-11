@@ -147,18 +147,24 @@
       <div id = "carrito">
 
       </div>
-
+      <div>
+          <button class='btn' onclick="location.href='Carrito2.html'" id="elformu">Continuar con la compra</button>
+      </div>
 </div>
 <script>
 
     function iniP(){
+        window.sessionStorage.setItem('total','0');
+        if(window.sessionStorage.getItem('log')=='false'){
+            $("#elformu").attr('onclick',"location.href='log.html'");
+        }
         if(window.sessionStorage.getItem('carro')== null||JSON.parse(window.sessionStorage.getItem('carro')).length == 0){
           $("#carrito").append("<p>Ningún elemento añadido al carrito<p>");
         }
         else{
           $("#carrito").append("<p>Articulos seleccionados:</p>");
 
-          $.getJSON("Productos.json", function(productos){
+          $.getJSON("../Tienda/Productos.json", function(productos){
               $.each(productos["Productos"],function(idx,producto){
                 comparar(producto);
               });
@@ -167,7 +173,6 @@
             setTimeout(function(){
                 $("#carrito").append("<hr id='total1'><p class='pl-5' id='total'>TOTAL= " + window.sessionStorage.getItem('total') + "$</p>");
             }, 500);
-
         }
   }
 
