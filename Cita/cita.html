@@ -45,14 +45,6 @@
 
 <!--Aqui va el cuerpo de texto y la pagina en general-->
 <body onload="iniP()">
-<style>
-    body{
-        background-image: url("../Imagenes/patron.jpg");
-    }
-</style>
-
-
-
   <div id="my-page">
     <div id="my-header">
     <nav class="navbar navbar-expand-lg sticky-top">
@@ -153,7 +145,7 @@
 
 
 <!--login/register-->
-<div class="container mb-5 mt-5 bg-light p-3">
+<div class="container-cita mb-5 mt-5 bg-light p-3">
 
        <h1 class="text-center" style="margin-top:3%; margin-bottom:3%;">¡Pide una cita con nosotros!</h1>
    <form>
@@ -344,7 +336,7 @@
             add(0,$("#formtinte").val());
         }
     })
-    
+
      $("#hora").change(function(){
          var fecha = JSON.parse(window.sessionStorage.getItem('fecha'));
          fecha[1] = $("#hora option:selected").text();
@@ -373,7 +365,7 @@
 
         if($("#formrizos").val()!='ninguno'){
             add(1,$("#formrizos").val());
-        }   
+        }
 
     })
 
@@ -395,7 +387,7 @@
 
         }
 
-           
+
         if($("#formcorte").val()!='ninguno'){
             add(2,$("#formcorte").val());
         }
@@ -419,8 +411,8 @@
                 $("#preciop").text("0$");
 
 
-        } 
-           
+        }
+
         if($("#formpeinado").val()!='ninguno'){
             add(3,$("#formpeinado").val());
 
@@ -447,12 +439,12 @@
 
         }
 
-        
+
         if($("#formdep").val()!='ninguno'){
             add(4,$("#formdep").val());
         }
-        }) 
-    
+        })
+
 
 
         $("#formman").change(function(){
@@ -473,12 +465,12 @@
 
         }
 
-        
+
         if($("#formman").val()!='ninguno'){
             add(5,$("#formman").val());
         }
-         }) 
- 
+         })
+
 
 
         $("#formlimp").change(function(){
@@ -506,14 +498,14 @@
         if($("#formlimp").val()!='ninguno'){
             add(6,$("#formlimp").val());
         }
-             
+
     })
-    
+
 
      function iniP(){
          // array posiciones
-         
-         
+
+
          //tinte 0
          //corte 1
          //rizado 2
@@ -521,19 +513,19 @@
          //depilacion 4
          //limpieza 5
          //manicura 6
-         
+
          //fecha
-         
+
          //dia 0
          //hora 1
-         
+
          var servicio = ['-1','-1','-1','-1','-1','-1','-1'];
          var fecha = ['-1','9:00'];
          window.sessionStorage.setItem('servicios',JSON.stringify(servicio));
          window.sessionStorage.setItem('fecha',JSON.stringify(fecha));
     }
      function add(tipo,objeto){
-              
+
              var servicio = JSON.parse(window.sessionStorage.getItem('servicios'));
              servicio[tipo] = objeto ;
              window.sessionStorage.setItem('servicios',JSON.stringify(servicio));

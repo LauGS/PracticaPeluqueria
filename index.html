@@ -110,7 +110,7 @@
     </div>
     <script>
       function carga() {
-        //funcion para detectar si estas logeado  
+        //funcion para detectar si estas logeado
         console.log(window.sessionStorage.getItem('log'));
         if (window.sessionStorage.getItem('log') == null) {
           window.sessionStorage.setItem('log', 'false'); //si no esta la variable log la pone a false
@@ -121,11 +121,11 @@
           $("#miperfil").attr("href", "Miperfil/perf.html");
           $("#log").append("<div style='color:white;background-color:black;display:block; text-align:center'>Hola " + sessionStorage.getItem('nombre') + "!</div>"); // si estas logueado vas a tu perfil y aparece un mensaje negro saludandote
         }
-          
+
           if(window.sessionStorage.getItem('carro')!=null){
         var carro1 = JSON.parse(window.sessionStorage.getItem('carro'));
         $("#carro").text('CARRITO ' + carro1.length + " "); //#("carro") busca elementos con id carro asi que la parte del nav de carrito tiene que tener ese id
-        $("#carro").append('<i class="fas fa-shopping-cart"></i>'); 
+        $("#carro").append('<i class="fas fa-shopping-cart"></i>');
         }//pone el numero de elementos en el carro y añade el icono
       }
     </script>
@@ -234,7 +234,7 @@
         <div class="card-body">
           <h5 class="card-title">Visita nuestra tienda</h5>
           <p class="card-text">Los productos usados por los profesionales al alcance de tu mano.</p>
-          <a href="#" class="btn">Ir</a>
+          <a href="Tienda/tienda.html" class="btn">Ir</a>
         </div>
       </div>
     </div>
