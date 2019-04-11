@@ -220,7 +220,24 @@ p{
   margin:auto;
   text-align:center;
 }
+
 #eliminar:hover{
   text-decoration: underline;
   cursor: pointer;
+}
+
+.container-rounded {
+  background-color: white;
+  border: solid 1px black;
+  margin-top:5%;
+  height:auto;
+  width: 50%;
+  margin:auto;
+  margin-bottom: 3%;
+  padding:3%;
+}
+
+.col-3, .col-md, .col-1 {
+  text-align: center;
+  margin:auto;
 }
