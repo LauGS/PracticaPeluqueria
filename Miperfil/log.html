@@ -96,7 +96,29 @@
 
     </nav>
   </div>
+  <script>
+    function cargaP() {
+      //funcion para detectar si estas logeado
+      console.log(window.sessionStorage.getItem('log'));
 
+      if (window.sessionStorage.getItem('log') == null) {
+        window.sessionStorage.setItem('log', 'false'); //si no esta la variable log la pone a false
+      }
+      if (window.sessionStorage.getItem('log') == 'false' || window.sessionStorage.getItem('log') == null) {
+        $("#miperfil").attr("href", "../Miperfil/log.html");
+        $("#perfilm").attr("href", "../Miperfil/log.html"); //si no estas logueado vas a la pantalla de log
+      } else {
+        $("#miperfil").attr("href", "../Miperfil/perf.html");
+        $("#perfilm").attr("href", "../Miperfil/perf.html");
+        $("#log").append("<div style='color:white;background-color:black;display:block; text-align:center'>Hola " + sessionStorage.getItem('nombre') + "!</div>"); // si estas logueado vas a tu perfil y aparece un mensaje negro saludandote
+      }
+        if(window.sessionStorage.getItem('carro')!=null){
+      var carro1 = JSON.parse(window.sessionStorage.getItem('carro'));
+      $("#carro").text('CARRITO ' + carro1.length + " "); //#("carro") busca elementos con id carro asi que la parte del nav de carrito tiene que tener ese id
+      $("#carro").append('<i class="fas fa-shopping-cart"></i>'); //pone el numero de elementos en el carro y añade el icono
+        }
+    }
+  </script>
 <!--
   <div id="my-menu">
       <ul id="my-ul">
@@ -185,7 +207,7 @@
         }
 
     })
-    
+
     function comprobar(usuario){
         var user = $("#email").val();
         var pass = $("#pass").val();

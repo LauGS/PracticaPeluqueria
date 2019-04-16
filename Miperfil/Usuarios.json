@@ -6,7 +6,8 @@
             "Correo": "carlos@peluqueria.com",
             "Pass": "123",
             "Admin": "true",
-            "Telefono": "666666666"
+            "Telefono": "666666666",
+            "Puntos": "500"
         },
         {
             "Nombre": "Michael",
@@ -14,7 +15,71 @@
             "Correo": "michael@peluqueria.com",
             "Pass": "123",
             "Admin": "false",
-            "Telefono":"555555555"
+            "Telefono":"555555555",
+            "Puntos": "500"
+        },
+        {
+            "Nombre": "Jorge",
+            "Apellidos": "Salvador",
+            "Correo": "jorge@correo.com",
+            "Pass": "123",
+            "Admin": "true",
+            "Telefono": "666666666",
+            "Puntos": "500"
+        },
+        {
+            "Nombre": "Paco",
+            "Apellidos": "Marin",
+            "Correo": "paco@peluqueria.com",
+            "Pass": "123",
+            "Admin": "true",
+            "Telefono": "666666666",
+            "Puntos": "500"
+        },
+        {
+            "Nombre": "Fran",
+            "Apellidos": "Romero santos",
+            "Correo": "fran@peluqueria.com",
+            "Pass": "123",
+            "Admin": "true",
+            "Telefono": "666666666",
+            "Puntos": "500"
+        },
+        {
+            "Nombre": "Ignacio",
+            "Apellidos": "Perez Cajal",
+            "Correo": "nacho@peluqueria.com",
+            "Pass": "123",
+            "Admin": "false",
+            "Telefono": "666666666",
+            "Puntos": "500"
+        },
+        {
+            "Nombre": "Felipe",
+            "Apellidos": "Rodriguez",
+            "Correo": "felipe@peluqueria.com",
+            "Pass": "123",
+            "Admin": "false",
+            "Telefono": "666666666",
+            "Puntos": "500"
+        },
+        {
+            "Nombre": "Pacop",
+            "Apellidos": "Perez Perez",
+            "Correo": "pacop@peluqueria.com",
+            "Pass": "123",
+            "Admin": "false",
+            "Telefono": "666666666",
+            "Puntos": "500"
+        },
+        {
+            "Nombre": "Luis",
+            "Apellidos": "Exposito",
+            "Correo": "luis@peluqueria.com",
+            "Pass": "123",
+            "Admin": "true",
+            "Telefono": "666666666",
+            "Puntos": "500"
         }
     ]
 }

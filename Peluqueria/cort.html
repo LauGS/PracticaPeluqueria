@@ -33,8 +33,8 @@
 
   <!--enlaces de mmenu-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="jquery.mmenu.js"></script>
-  <link href="jquery.mmenu.css" rel="stylesheet">
+  <script src="../jquery.mmenu.js"></script>
+  <link href="../jquery.mmenu.css" rel="stylesheet">
   <style type="text/css">
     .mm-menu {
       --mm-color-background: black;
@@ -49,10 +49,7 @@
 
 <!--Aqui va el cuerpo de texto y la pagina en general-->
 
-<body>
-
-
-
+<body onload="carga()">
   <div id="my-page">
     <div id="my-header">
       <nav class="navbar navbar-expand-lg sticky-top">
@@ -95,10 +92,10 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="../Miperfil/perf.html">MI PERFIL <i class="fas fa-user"> </i> </a>
+              <a class="nav-link" href="../Miperfil/perf.html" id="miperfil">MI PERFIL <i class="fas fa-user"> </i> </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../Carrito/Carrito.html">CARRITO <i class="fas fa-shopping-cart"></i>
+              <a class="nav-link" href="../Carrito/Carrito.html" id="carro">CARRITO <i class="fas fa-shopping-cart"></i>
               </a>
             </li>
           </ul>
@@ -106,35 +103,53 @@
         </div>
 
       </nav>
+      <div id="log"></div>
+    </div>
+    <script>
+      function carga() {
+        //funcion para detectar si estas logeado
+        console.log(window.sessionStorage.getItem('log'));
+
+        if (window.sessionStorage.getItem('log') == null) {
+          window.sessionStorage.setItem('log', 'false'); //si no esta la variable log la pone a false
+        }
+        if (window.sessionStorage.getItem('log') == 'false' || window.sessionStorage.getItem('log') == null) {
+          $("#miperfil").attr("href", "../Miperfil/log.html");
+          $("#perfilm").attr("href", "../Miperfil/log.html"); //si no estas logueado vas a la pantalla de log
+        } else {
+          $("#miperfil").attr("href", "../Miperfil/perf.html");
+          $("#perfilm").attr("href", "../Miperfil/perf.html");
+          $("#log").append("<div style='color:white;background-color:black;display:block; text-align:center'>Hola " + sessionStorage.getItem('nombre') + "!</div>"); // si estas logueado vas a tu perfil y aparece un mensaje negro saludandote
+        }
+          if(window.sessionStorage.getItem('carro')!=null){
+        var carro1 = JSON.parse(window.sessionStorage.getItem('carro'));
+        $("#carro").text('CARRITO ' + carro1.length + " "); //#("carro") busca elementos con id carro asi que la parte del nav de carrito tiene que tener ese id
+        $("#carro").append('<i class="fas fa-shopping-cart"></i>'); //pone el numero de elementos en el carro y añade el icono
+          }
+      }
+    </script>
     </div>
 
-    <!--menu de movil
+    <!--menu de movil-->
   <div id="my-menu">
       <ul id="my-ul">
-        <li><a href="#">PELUQUERIA</a><ul>
-          <li><a href="#">Tinte</a></li>
-          <li><a href="#">Permanente</a></li>
+        <li><a>PELUQUERIA</a><ul>
+          <li><a href="tint.html">Tinte</a></li>
+          <li><a href="perm.html">Permanente</a></li>
           <li><a href="#">Corte</a></li>
-          <li><a href="#">Peinado</a></li>
+          <li><a href="pein.html">Peinado</a></li>
 
         </ul></li>
 
-        <li><a href="#">ESTÉTICA</a><ul>
-          <li><a href="#">Depilación</a></li>
-          <li><a href="#">Manicura</a></li>
-          <li><a href="#">Limpieza</a></li>
+        <li><a>ESTÉTICA</a><ul>
+          <li><a href="../Estetica/dep.html">Depilación</a></li>
+          <li><a href="../Estetica/man.html">Manicura</a></li>
+          <li><a href="../Estetica/Limp.html">Limpieza</a></li>
 
         </ul></li>
 
-        <li><a href="#">TIENDA</a><ul>
-          <li><a href="#">Champú Hombre</a></li>
-          <li><a href="#">Champú Mujer</a></li>
-          <li><a href="#">Secador</a></li>
-          <li><a href="#">Plancha</a></li>
-          <li><a href="#">Crema</a></li>
-
-        </ul></li>
-        <li><a href="#">MI PERFIL</a></li>
+        <li><a href="../Tienda/tienda.html">TIENDA</a></li>
+        <li><a href="#" id="perfilm">MI PERFIL</a></li>
       </ul>
   </div>
 
@@ -220,7 +235,7 @@ Los tintes contienen una variedad de elementos, como agua desmineralizada, alcoh
 
   <!--finfo-->
 <!--span-->
-<div class = "container rounded" style="background-color:lightgrey; margin-top:5%; height:auto; margin-bottom:3%; padding:3%;">
+<div class = "container-rounded">
     <div class = "row h-30">
         <div class = "col-3">
             <img src="../Imagenes/date-to-icon-27853.png" class="img-fluid">

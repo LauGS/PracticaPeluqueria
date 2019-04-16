@@ -135,19 +135,33 @@
  <div class="container">
      <ul class="nav nav-tabs">
     <li class="nav-item">
-      <a class="nav-link active" href="#">Datos personales</a>
+      <a class="nav-link" href="perf.html">Datos personales</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="hc.html">Historial de citas</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="tp.html">Tarjeta de puntos</a>
+      <a class="nav-link active" href="tp.html">Tarjeta de puntos</a>
     </li>
   </ul>
 
-  <div class="container p-3 text-center m-5" id="datos">
+  <div class="container pt-3 m-5 text-center" id="datos">
+    <div id="puntos" class="jumbotron">
+
+    </div>
+
     <script>
-      $("#datos").append("<p> <strong>Nombre:</strong>  "+ window.sessionStorage.getItem("nombre")+"</p><hr><p> <strong>Apellidos:</strong>  "+ window.sessionStorage.getItem("apellidos")+"</p><hr><p> <strong>Correo:</strong>  "+ window.sessionStorage.getItem("user")+"</p><hr>");
+    $.getJSON("Usuarios.json", function(usuarios){
+        $.each(usuarios["Usuarios"],function(idx,usuario){
+            imprimir(usuario);
+        });
+      });
+
+    function imprimir(usuario){
+      if(window.sessionStorage.getItem("nombre")==usuario["Nombre"]){
+        $("#puntos").append("<p>Tienes acumulado una cantidad de <strong>" + usuario["Puntos"] + "</strong> puntos. ¡Úsalos para conseguir descuentos!</p>");
+      }
+    }
     </script>
   </div>
  </div>
