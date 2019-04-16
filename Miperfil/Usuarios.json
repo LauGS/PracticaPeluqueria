@@ -80,6 +80,15 @@
             "Admin": "true",
             "Telefono": "666666666",
             "Puntos": "500"
+        },
+        {
+            "Nombre": "Xin",
+            "Apellidos": "Chen",
+            "Correo": "xinchen@peluqueria.com",
+            "Pass": "1234",
+            "Admin": "false",
+            "Telefono": "666666666",
+            "Puntos": "500"
         }
     ]
 }
