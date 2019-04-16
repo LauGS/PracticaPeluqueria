@@ -171,7 +171,7 @@
 
 function finCompra(){
   window.sessionStorage.setItem('total',null);
-  window.sessionStorage.setItem('carro',null);
+  window.sessionStorage.setItem('carro','[]');
   location.href='../index.html';
 }
 function comparar(producto){
@@ -180,33 +180,12 @@ function comparar(producto){
   var carro = JSON.parse(window.sessionStorage.getItem('carro'));
   for (var i = 0; i < carro.length ; i++){
     if(carro[i]==producto["ID"]){
-      total(1,producto["Precio"]);
       nombre = producto["Nombre"];
       precio = producto["Precio"];
       $("#carrito").append("<p class ='pl-3 text-secondary' id='" + producto["ID"]+carro[i] + "'><i class='fas fa-angle-right'></i> " + nombre + " " + precio +"</p>");
       }
     }
   }
-
-  function total(tipo,producto){
-    //tipo añadir
-    if(tipo==1){
-      if(window.sessionStorage.getItem('total')==null){
-          window.sessionStorage.setItem('total',producto);
-      }
-      else{
-        var t = parseInt(window.sessionStorage.getItem('total'));
-        t+=parseInt(producto);
-        window.sessionStorage.setItem('total',t);
-        }
-    }
-    else{
-      var t = parseInt(window.sessionStorage.getItem('total'));
-      t = t - parseInt(producto);
-      window.sessionStorage.setItem('total',t);
-    }
-  }
-
 
 </script>
 

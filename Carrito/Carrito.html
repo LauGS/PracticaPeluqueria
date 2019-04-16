@@ -149,8 +149,8 @@
       <div id = "carrito">
 
       </div>
-      <div>
-          <button class='btn' onclick="location.href='Carrito2.html'" id="elformu">Continuar con la compra</button>
+      <div id="boton">
+
       </div>
 </div>
 <script>
@@ -165,6 +165,7 @@
         }
         else{
           $("#carrito").append("<p>Articulos seleccionados:</p>");
+          $("#boton").append("<button class='btn' onclick='cambioP()' id='elformu'>Continuar con la compra</button>");
 
           $.getJSON("../Tienda/Productos.json", function(productos){
               $.each(productos["Productos"],function(idx,producto){
@@ -177,7 +178,9 @@
             }, 500);
         }
   }
-
+function cambioP(){
+  location.href = "Carrito2.html";
+}
 function comparar(producto){
   var nombre;
   var precio;
@@ -210,6 +213,7 @@ function comparar(producto){
       window.sessionStorage.setItem('total',t);
     }
   }
+
   function eliminar(producto,carro,precio){
     $("#"+producto).remove();
     var carro2 = JSON.parse(window.sessionStorage.getItem('carro'));

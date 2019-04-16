@@ -209,13 +209,7 @@
                   comprobar(usuario);
                 });
               });
-
             });
-        if($("#menrror").length == 0){
-        $("#error").append("<p id='menrror'>No existe este usuario</p>");
-        }
-
-    })
 
     function comprobar(usuario){
         var user = $("#email").val();
@@ -234,9 +228,10 @@
               if ($("#menrror").length == 0) {
                 $("#error").append("<p id='menrror'>No existe este usuario</p>");
               }
-
-            })
+            }
           }
+        }
+
 
           </script>
 
