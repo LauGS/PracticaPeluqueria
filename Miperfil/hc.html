@@ -135,20 +135,40 @@
  <div class="container">
      <ul class="nav nav-tabs">
     <li class="nav-item">
-      <a class="nav-link active" href="#">Datos personales</a>
+      <a class="nav-link" href="perf.html">Datos personales</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="hc.html">Historial de citas</a>
+      <a class="nav-link active" href="#">Historial de citas</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="tp.html">Tarjeta de puntos</a>
     </li>
   </ul>
 
-  <div class="container p-3 text-center m-5" id="datos">
+  <div class="container pt-3 text-center pb-5" id="datos">
     <script>
-      $("#datos").append("<p> <strong>Nombre:</strong>  "+ window.sessionStorage.getItem("nombre")+"</p><hr><p> <strong>Apellidos:</strong>  "+ window.sessionStorage.getItem("apellidos")+"</p><hr><p> <strong>Correo:</strong>  "+ window.sessionStorage.getItem("user")+"</p><hr>");
-    </script>
+      if(window.sessionStorage.getItem("log")==false){
+            $("#datos").append("<p>Ninguna cita</p>");
+        }
+      $.getJSON("Citas.json", function(citas){
+          $.each(citas["Citas"],function(idx,cita){
+              imprimir(cita);
+          });
+        });
+     function imprimir(cita){
+       var cit=false;
+       if(cita["IDU"]==window.sessionStorage.getItem("nombre")){
+         console.log("sd");
+          cit=true;
+          $("#datos").append("<p><strong>Fecha:  </strong>"+ cita["fecha"] + "<strong>  Servicios:  </strong></p>");
+          for(var i = 0; i< cita["servicios"].length ; i++){
+            $("#datos").append("<p class='pl-3'>" + cita["servicios"][i] + "</p>");
+          }
+        $("#datos").append("<hr>");
+       }
+    }
+
+  </script>
   </div>
  </div>
 

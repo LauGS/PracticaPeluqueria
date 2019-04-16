@@ -1,0 +1,59 @@
+{
+    "Citas": [
+        {
+            "IDU": "Carlos",
+            "servicios": ["Tinte permanente", "Corte con tijera"],
+            "fecha":"15-01-2018"
+        },
+        {
+          "IDU": "Michael",
+          "servicios": "Corte con maquinilla",
+          "fecha":"15-01-2018"
+        },
+        {
+            "IDU": "Carlos",
+            "servicios": ["Tinte permanente", "Corte con tijera"],
+            "fecha":"15-01-2018"
+        },
+        {
+            "IDU": "Michael",
+            "servicios": ["Tinte permanente", "Corte con tijera"],
+            "fecha":"15-01-2018"
+        },
+        {
+            "IDU": "Paco",
+            "servicios": ["Tinte permanente", "Corte con tijera"],
+            "fecha":"15-01-2018"
+        },
+        {
+            "IDU": "Pacop",
+            "servicios": ["Tinte permanente", "Corte con tijera"],
+            "fecha":"15-01-2018"
+        },
+        {
+            "IDU": "Luis",
+            "servicios": ["Tinte permanente", "Corte con tijera"],
+            "fecha":"15-01-2018"
+        },
+        {
+            "IDU": "Luis",
+            "servicios": ["Tinte permanente", "Corte con tijera"],
+            "fecha":"15-01-2018"
+        },
+        {
+            "IDU": "Ignacio",
+            "servicios": ["Tinte permanente", "Corte con tijera"],
+            "fecha":"15-01-2018"
+        },
+        {
+            "IDU": "Felipe",
+            "servicios": ["Tinte permanente", "Corte con tijera"],
+            "fecha":"15-01-2018"
+        },
+        {
+            "IDU": "Carlos",
+            "servicios": ["Tinte permanente", "Corte con tijera"],
+            "fecha":"15-01-2018"
+        }
+    ]
+}
