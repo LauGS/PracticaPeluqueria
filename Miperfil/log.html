@@ -209,35 +209,27 @@
                   comprobar(usuario);
                 });
               });
-
-            });
-        if($("#menrror").length == 0){
-        $("#error").append("<p id='menrror'>No existe este usuario</p>");
-        }
-
-    })
-
-    function comprobar(usuario){
-        var user = $("#email").val();
-        var pass = $("#pass").val();
-
-        if(usuario["Correo"]== user){
-            if(usuario["Pass"]==pass){
-                window.sessionStorage.setItem('log',true);
-                window.sessionStorage.setItem('user',user);
-                window.sessionStorage.setItem('nombre',usuario["Nombre"]);
-                window.sessionStorage.setItem('apellidos',usuario["Apellidos"]);
-                window.sessionStorage.setItem('telefono',usuario["Telefono"]);
-                window.sessionStorage.setItem('admin',usuario["Admin"]);
-                location.href = "../index.html";
-
               if ($("#menrror").length == 0) {
                 $("#error").append("<p id='menrror'>No existe este usuario</p>");
               }
 
             })
-          }
 
+            function comprobar(usuario) {
+              var user = $("#email").val();
+              var pass = $("#pass").val();
+
+              if (usuario["Correo"] == user) {
+                if (usuario["Pass"] == pass) {
+                  window.sessionStorage.setItem('log', true);
+                  window.sessionStorage.setItem('user', user);
+                  window.sessionStorage.setItem('nombre', usuario["Nombre"]);
+                  window.sessionStorage.setItem('apellidos', usuario["Apellidos"]);
+                  window.sessionStorage.setItem('telefono', usuario["Telefono"]);
+                  location.href = "../index.html";
+                }
+              }
+            }
           </script>
 
         </div>
