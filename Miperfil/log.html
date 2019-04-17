@@ -32,8 +32,8 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
   <!--enlaces de mmenu-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="jquery.mmenu.js"></script>
-  <link href="jquery.mmenu.css" rel="stylesheet">
+  <script src="../jquery.mmenu.js"></script>
+  <link href="../jquery.mmenu.css" rel="stylesheet">
   <style type="text/css">
     .mm-menu {
       --mm-color-background: black;
@@ -126,35 +126,33 @@
         }
       }
     </script>
-    <!--
-  <div id="my-menu">
+
+    <div id="my-menu">
       <ul id="my-ul">
-        <li><a href="#">PELUQUERIA</a><ul>
-          <li><a href="Peluqueria/tint.html">Tinte</a></li>
-          <li><a href="#">Permanente</a></li>
-          <li><a href="#">Corte</a></li>
-          <li><a href="#">Peinado</a></li>
+        <li><a href="#">PELUQUERIA</a>
+          <ul>
+            <li><a href="../Peluqueria/tint.html">Tinte</a></li>
+            <li><a href="../Peluqueria/perm.html">Permanente</a></li>
+            <li><a href="../Peluqueria/cort.html">Corte</a></li>
+            <li><a href="../Peluqueria/pein.html">Peinado</a></li>
 
-        </ul></li>
+          </ul>
+        </li>
 
-        <li><a href="#">ESTÉTICA</a><ul>
-          <li><a href="#">Depilación</a></li>
-          <li><a href="#">Manicura</a></li>
-          <li><a href="#">Limpieza</a></li>
+        <li><a href="#">ESTÉTICA</a>
+          <ul>
+            <li><a href="../Estetica/dep.html">Depilación</a></li>
+            <li><a href="../Estetica/man.html">Manicura</a></li>
+            <li><a href="../Estetica/Limp.html">Limpieza</a></li>
 
-        </ul></li>
+          </ul>
+        </li>
 
-        <li><a href="#">TIENDA</a><ul>
-          <li><a href="#">Champú Hombre</a></li>
-          <li><a href="#">Champú Mujer</a></li>
-          <li><a href="#">Secador</a></li>
-          <li><a href="#">Plancha</a></li>
-          <li><a href="#">Crema</a></li>
-
-        </ul></li>
-        <li><a href="#">MI PERFIL</a></li>
+        <li><a href="../Tienda/tienda.html">TIENDA</a>
+        </li>
+        <li><a href="#" id="perfilm">MI PERFIL</a></li>
       </ul>
-  </div>
+    </div>
 
 
   <script>
@@ -170,7 +168,7 @@
      });
   </script>
 
--->
+
 
     <h1 class="text-center" style="margin-top:3%; margin-bottom:3%;">Inicio de sesión</h1>
     <!--login/register-->
@@ -232,23 +230,7 @@
           }
         }
 
-
-            function comprobar(usuario) {
-              var user = $("#email").val();
-              var pass = $("#pass").val();
-
-              if (usuario["Correo"] == user) {
-                if (usuario["Pass"] == pass) {
-                  window.sessionStorage.setItem('log', true);
-                  window.sessionStorage.setItem('user', user);
-                  window.sessionStorage.setItem('nombre', usuario["Nombre"]);
-                  window.sessionStorage.setItem('apellidos', usuario["Apellidos"]);
-                  window.sessionStorage.setItem('telefono', usuario["Telefono"]);
-                  location.href = "../index.html";
-                }
-              }
-            }
-          </script>
+      </script>
 
         </div>
       </div>
