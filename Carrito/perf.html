@@ -19,11 +19,11 @@
     <link rel="stylesheet" type="text/css" href="../style.css">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
+
     <!--enlaces de mmenu-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../jquery.mmenu.js"></script>
@@ -41,17 +41,14 @@
 </head>
 
 <!--Aqui va el cuerpo de texto y la pagina en general-->
-<body onload="iniP()">
-
-
-
+<body onload="cargaP()">
   <div id="my-page">
     <div id="my-header">
     <nav class="navbar navbar-expand-lg sticky-top">
 
       <a class="navbar-brand" href="../index.html">
-        <img class="logo" border="0" alt="Logo peluqueria" src="../Imagenes/logo.jpg">
-       </a>
+       <img class="logo" border="0" alt="Logo peluqueria" src="../Imagenes/logo.jpg">
+      </a>
 
         <button id="my-button" class="navbar-toggler" type="button">
           <i class="fas fa-bars"></i>
@@ -84,11 +81,10 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="../Miperfil/perf.html" id="miperfil">MI PERFIL   <i class="fas fa-user">  </i>  </a>
+                    <a class="nav-link" href="perf.html">MI PERFIL   <i class="fas fa-user">  </i>  </a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link" href="Carrito.html" id="carro">CARRITO   <i class="fas fa-shopping-cart"></i>
-  </a>
+                    <a class="nav-link" href="../Carrito/Carrito.html" id ="carro">CARRITO<i class="fas fa-shopping-cart"></i></a>
                 </li>
             </ul>
 
@@ -98,30 +94,25 @@
   </div>
 
   <div id="my-menu">
-    <ul id="my-ul">
-      <li><a href="#">PELUQUERIA</a>
-        <ul>
+      <ul id="my-ul">
+        <li><a>PELUQUERIA</a><ul>
           <li><a href="../Peluqueria/tint.html">Tinte</a></li>
-          <li><a href="../Peluqueria/perm.html">Permanente</a></li>
+          <li><a href="../Peluqueria/perf.html">Permanente</a></li>
           <li><a href="../Peluqueria/cort.html">Corte</a></li>
           <li><a href="../Peluqueria/pein.html">Peinado</a></li>
 
-        </ul>
-      </li>
+        </ul></li>
 
-      <li><a href="#">ESTÉTICA</a>
-        <ul>
+        <li><a>ESTÉTICA</a><ul>
           <li><a href="../Estetica/dep.html">Depilación</a></li>
           <li><a href="../Estetica/man.html">Manicura</a></li>
           <li><a href="../Estetica/Limp.html">Limpieza</a></li>
 
-        </ul>
-      </li>
+        </ul></li>
 
-      <li><a href="../Tienda/tienda.html">TIENDA</a>
-      </li>
-      <li><a href="#" id="perfilm">MI PERFIL</a></li>
-    </ul>
+        <li><a href="../Tienda/tienda.html">TIENDA</a></li>
+        <li><a href="#" id="perfilm">MI PERFIL</a></li>
+      </ul>
   </div>
 
 
@@ -138,62 +129,31 @@
      });
   </script>
 
-    <div class="container p-3">
-      <div class="row">
-           <div class="col">
-                <img src="../Imagenes/citaacp.jpg" class="img-fluid">
-           </div>
-          <div class="col">
-              <h1 class="text-center">Realizar Pago</h1>
-        <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Titular de la tarjeta</label>
-            <input type="text" placeholder="Nombre">
-          </div>
 
-          <div class="form-group">
-            <label >Numero de la tarjeta</label>
-            <input type="text" placeholder="Número de la tarjeta">
-          </div>
+ <h1 class="text-center" style="margin-top:3%; margin-bottom:3%;">Mi perfil</h1>
 
-         <div class="form-group">
-            <label >Válida hasta</label>
-            <input type="date" placeholder="Válida hasta">
-          </div>
+ <div class="container">
+     <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Datos personales</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="hc.html">Historial de citas</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="tp.html">Tarjeta de puntos</a>
+    </li>
+  </ul>
 
-          <div class="form-group">
-            <label >Número de seguridad</label>
-            <input type="text" placeholder="Número de seguridad">
-          </div>
-
-        </form>
-
-        <button class="btn" onclick="location.href='Carrito3.html'">Realizar pago</button>
+  <div class="container p-3 text-center m-5" id="datos">
+    <script>
+      $("#datos").append("<p> <strong>Nombre:</strong>  "+ window.sessionStorage.getItem("nombre")+"</p><hr><p> <strong>Apellidos:</strong>  "+ window.sessionStorage.getItem("apellidos")+"</p><hr><p> <strong>Correo:</strong>  "+ window.sessionStorage.getItem("user")+"</p><hr>");
+    </script>
+    <div id="admin">
     </div>
-<script>
-  function iniP(){
-    if (window.sessionStorage.getItem('log') == null) {
-      window.sessionStorage.setItem('log', 'false'); //si no esta la variable log la pone a false
-    }
-    if (window.sessionStorage.getItem('log') == 'false' || window.sessionStorage.getItem('log') == null) {
-      $("#miperfil").attr("href", "../Miperfil/log.html");
-      $("#perfilm").attr("href", "../Miperfil/log.html"); //si no estas logueado vas a la pantalla de log
-    } else {
-      $("#miperfil").attr("href", "../Miperfil/perf.html");
-      $("#perfilm").attr("href", "../Miperfil/perf.html");
-      $("#log").append("<div style='color:white;background-color:black;display:block; text-align:center'>Hola " + sessionStorage.getItem('nombre') + "!</div>"); // si estas logueado vas a tu perfil y aparece un mensaje negro saludandote
-    }
-      if(window.sessionStorage.getItem('carro')!=null){
-    var carro1 = JSON.parse(window.sessionStorage.getItem('carro'));
-    $("#carro").text('CARRITO ' + carro1.length + " "); //#("carro") busca elementos con id carro asi que la parte del nav de carrito tiene que tener ese id
-    $("#carro").append('<i class="fas fa-shopping-cart"></i>'); //pone el numero de elementos en el carro y añade el icono
-      }
-  }
-</script>
+  </div>
+ </div>
 
-      </div>
-
-    </div>
 
 <!--seccion: donde encontrarnos-->
      <div class="container-fluid">
@@ -214,6 +174,36 @@
                 <p class="card-text">De lunes a viernes: de 9:00 a 21:00</p>
                 <p class="card-text">Sábados 9:00 a 13:00</p>
 
+                <script>
+                  function cargaP() {
+                    //funcion para detectar si estas logeado
+                    console.log(window.sessionStorage.getItem('admin'));
+
+                    if(window.sessionStorage.getItem("admin")=="true"){
+                      $("#admin").append("<button class ='btn m-3'>Ir a administración </button>");
+                      console.log("admin");
+                    }
+
+                    console.log(window.sessionStorage.getItem('log'));
+
+                    if (window.sessionStorage.getItem('log') == null) {
+                      window.sessionStorage.setItem('log', 'false'); //si no esta la variable log la pone a false
+                    }
+                    if (window.sessionStorage.getItem('log') == 'false' || window.sessionStorage.getItem('log') == null) {
+                      $("#miperfil").attr("href", "log.html");
+                      $("#perfilm").attr("href", "log.html"); //si no estas logueado vas a la pantalla de log
+                    } else {
+                      $("#miperfil").attr("href", "perf.html");
+                      $("#perfilm").attr("href", "perf.html");
+                      $("#log").append("<div style='color:white;background-color:black;display:block; text-align:center'>Hola " + sessionStorage.getItem('nombre') + "!</div>"); // si estas logueado vas a tu perfil y aparece un mensaje negro saludandote
+                    }
+                      if(window.sessionStorage.getItem('carro')!=null){
+                    var carro1 = JSON.parse(window.sessionStorage.getItem('carro'));
+                    $("#carro").text('CARRITO ' + carro1.length + " "); //#("carro") busca elementos con id carro asi que la parte del nav de carrito tiene que tener ese id
+                    $("#carro").append('<i class="fas fa-shopping-cart"></i>'); //pone el numero de elementos en el carro y añade el icono
+                      }
+                  }
+                </script>
       </div>
     </div>
     </div>

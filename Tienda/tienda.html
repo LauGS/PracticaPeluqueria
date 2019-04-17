@@ -261,9 +261,11 @@
       $("#carro").append('<i class="fas fa-shopping-cart"></i>'); //pone el numero de elementos en el carro y añade el icono
         }
 
+        if(window.sessionStorage.getItem('carro')==null){
+          var carro = [];
+          window.sessionStorage.setItem('carro',JSON.stringify(carro));
+        }
 
-        var carro = [];
-        window.sessionStorage.setItem('carro',JSON.stringify(carro));
         $("#carro2").hide();
         $("#1").empty();
         $.getJSON("Productos.json", function(productos){
