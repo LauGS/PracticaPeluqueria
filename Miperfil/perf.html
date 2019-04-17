@@ -151,9 +151,31 @@
     </script>
     <div id="admin">
     </div>
+    <style>
+      #boton{
+        color:red;
+        border-color:red;
+      }
+      #boton:hover{
+        background-color:white;
+        color:darkred;
+        border-color:darkred;
+      }
+    </style>
+    <button class="btn" id="boton" onclick="cerrarSesion()">Cerrar sesión <i class="fas fa-times"></i></button>
   </div>
  </div>
-
+<script>
+  function cerrarSesion(){
+    window.sessionStorage.setItem('log',false);
+    window.sessionStorage.setItem('user',null);
+    window.sessionStorage.setItem('nombre',null);
+    window.sessionStorage.setItem('apellidos',null);
+    window.sessionStorage.setItem('telefono',null);
+    window.sessionStorage.setItem('admin',null);
+    location.href = "../index.html";
+  }
+</script>
 
 <!--seccion: donde encontrarnos-->
      <div class="container-fluid">

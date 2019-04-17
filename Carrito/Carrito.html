@@ -182,13 +182,10 @@
           }
 
         window.sessionStorage.setItem('total', '0');
-        if (window.sessionStorage.getItem('log') == 'false') {
-          $("#elformu").attr('onclick', "location.href='log.html'");
-        }
+
         if (window.sessionStorage.getItem('carro') == null || JSON.parse(window.sessionStorage.getItem('carro')).length == 0) {
           $("#carrito").append("<p>Ningún elemento añadido al carrito<p>");
-        }
-        else {
+        }else {
           $("#carrito").append("<p>Articulos seleccionados:</p>");
           $("#boton").append("<button class='btn' onclick='cambioP()' id='elformu'>Continuar con la compra</button>");
 
@@ -202,7 +199,9 @@
             $("#carrito").append("<hr id='total1'><p class='pl-5' id='total'>TOTAL= " + window.sessionStorage.getItem('total') + "€</p>");
           }, 500);
         }
-
+        if (window.sessionStorage.getItem('log') == 'false') {
+          $("#elformu").attr('onclick', "location.href='log.html'");
+        }
   }
 function cambioP(){
   location.href = "Carrito2.html";
