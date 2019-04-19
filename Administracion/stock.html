@@ -41,7 +41,7 @@
 </head>
 
 <!--Aqui va el cuerpo de texto y la pagina en general-->
-<body>
+<body onload="cargaP()">
   <div id="my-page">
     <div id="my-header">
     <nav class="navbar navbar-expand-lg sticky-top">
@@ -59,7 +59,7 @@
 
             <ul class="navbar-nav mr-auto mm-nolistview">
               <li class="nav-item">
-                  <a class="nav-link" href="#">EMPLEADOS</a>
+                  <a class="nav-link" href="empleados.html">EMPLEADOS</a>
               </li>
 
                 <li class="nav-item dropdown">
@@ -126,83 +126,36 @@
         });
      });
   </script>
-<h1 class="text-center">Lista de empleados</h1>
-<div class="container">
-  <div class="card-deck">
-    <div class="card">
-      <img src="ImagenesAdmin/1.jpg" class="img-fluid" >
-      <div class="card-body">
-        <p class="text-center"><strong>Michael cera</strong></p>
-        <hr>
-        <p>Jornada completa de 9 a 5</p>
-        <hr>
-        <p>Libra los lunes y los domingos</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="ImagenesAdmin/2.jpg" class="img-fluid">
-      <div class="card-body">
-        <p class="text-center"><strong>Jorge Sánchez</strong></p>
-        <hr>
-        <p>Jornada completa de 9 a 5</p>
-        <hr>
-        <p>Libra los martes y los domingos</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="ImagenesAdmin/3.jpg" class="img-fluid">
-      <div class="card-body">
-        <div class="card-body">
-          <p class="text-center"><strong>Sara Rodriguez</strong></p>
-          <hr>
-          <p>Jornada completa de 9 a 5</p>
-          <hr>
-          <p>Libra los miércoles y los domingos</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card-deck">
-    <div class="card">
-      <img src="ImagenesAdmin/4.jpg" class="img-fluid">
-      <div class="card-body">
-        <div class="card-body">
-          <p class="text-center"><strong>Iván Rodriguez</strong></p>
-          <hr>
-          <p>Jornada completa de 5 a 9</p>
-          <hr>
-          <p>Libra los jueves y los sábados</p>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="ImagenesAdmin/5.jpg" class="img-fluid">
-      <div class="card-body">
-        <div class="card-body">
-          <p class="text-center"><strong>Sandra Pérez</strong></p>
-          <hr>
-          <p>Jornada completa de 5 a 9</p>
-          <hr>
-          <p>Libra los miércoles y los viernes</p>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="ImagenesAdmin/6.jpg" class="img-fluid">
-      <div class="card-body">
-        <div class="card-body">
-          <p class="text-center"><strong>Luisa Domínguez</strong></p>
-          <hr>
-          <p>Jornada completa de 5 a 9</p>
-          <hr>
-          <p>Libra los sábados y los domingos</p>
-        </div>
-      </div>
-    </div>
-  </div>
+<h1 class="text-center">Lista de productos</h1>
+<div class="text-center mt-3"><button class="btn" onclick="location.href='addprod.html'">Guardar cambios</button></div>
+<div class="container mt-5 mb-5">
+    <table class="table">
+      <thead>
+        <th scope="row">ID</th>
+        <th>Nombre</th>
+        <th>Unidades</th>
+      </thead>
+      <tbody id="productos">
+
+      </tbody>
+    </table>
 </div>
+<style>
+    input{
+      width:50px;
+    }
+</style>
+<div class="text-center mt-3 mb-5"><button class="btn" onclick="location.href='addprod.html'">Guardar cambios</button></div>
+<script>
+  function cargaP(){
+  $.getJSON("Productos.json", function(productos){
+      $.each(productos["Productos"],function(idx,producto){
+           $("#productos").append("<tr><th scope='row'>"+producto["ID"]+"</th><td>"+producto["Nombre"]+"</td><td>"+"<input type='text' value='"+producto["Unidades"]+"'>");
 
-
+      })
+  })
+}
+</script>
 <!--seccion: donde encontrarnos-->
      <div class="container-fluid">
         <div class ="row">
