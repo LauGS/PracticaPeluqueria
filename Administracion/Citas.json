@@ -8,7 +8,7 @@
         },
         {
           "IDU": "Michael",
-          "servicios": "Corte con maquinilla",
+          "servicios": ["Corte con maquinilla"],
           "fecha":"15-04-2019",
           "hora":"13:00"
         },

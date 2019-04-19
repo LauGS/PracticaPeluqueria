@@ -59,14 +59,14 @@
 
             <ul class="navbar-nav mr-auto mm-nolistview">
               <li class="nav-item">
-                  <a class="nav-link" href="empleados.html">EMPLEADOS</a>
+                  <a class="nav-link" href="#">EMPLEADOS</a>
               </li>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PRODUCTOS</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="stock.html">Stock</a>
-                          <a class="dropdown-item" href="productos.html">Productos</a>
+                          <a class="dropdown-item" href="../Peluqueria/tint.html">Stock</a>
+                          <a class="dropdown-item" href="../Peluqueria/perm.html">Productos</a>
                         </div>
                 </li>
 
@@ -125,37 +125,50 @@
            API.open();
         });
      });
+     function cargaP(){
+       $.getJSON("Citas.json", function(citas){
+           $.each(citas["Citas"],function(idx,cita){
+              comprobar(cita);
+           })
+       })
+     }
+     function comprobar(cita){
+       var parts = cita["fecha"].split("-");
+       var dt = new Date(parseInt(parts[2], 10),
+                  parseInt(parts[1], 10) - 1,
+                  parseInt(parts[0], 10));
+       var hoy = Date.now();
+
+       if(dt>hoy){
+         $("#1").append("<p><strong>Nombre:</strong>  "+cita["IDU"]+"  "+"<strong>   Fecha:  </strong>"+ cita["fecha"] + "<strong>  Servicios:  </strong></p>");
+         for(var i = 0; i< cita["servicios"].length ; i++){
+           $("#1").append("<p class='pl-3'>" + cita["servicios"][i] + "</p>");
+         }
+         $("#1").append("<hr>");
+       }
+       else{
+         $("#2").append("<p class='text-secondary'><strong>Nombre:  </strong>"+cita["IDU"]+"  "+"<strong>   Fecha:  </strong>"+ cita["fecha"] + "<strong>  Servicios:  </strong></p>");
+         for(var i = 0; i< cita["servicios"].length ; i++){
+           $("#2").append("<p class='pl-3 text-secondary'>" + cita["servicios"][i] + "</p>");
+         }
+         $("#2").append("<hr>");
+       }
+
+     }
   </script>
-<h1 class="text-center">Lista de productos</h1>
-<div class="text-center mt-3"><button class="btn" onclick="$('#mensaje').text('Cambios guardados')">Guardar cambios</button><p id="mensaje" class="mt-1 mb-1 text-danger"></p></div>
-<div class="container mt-5 mb-5">
-    <table class="table">
-      <thead>
-        <th scope="row">ID</th>
-        <th>Nombre</th>
-        <th>Unidades</th>
-      </thead>
-      <tbody id="productos">
+<h1 class="text-center">Gestión de citas</h1>
 
-      </tbody>
-    </table>
+<div class="container">
+  <div id="1">
+    <h2 class="text-center">Citas pendientes</h2>
+    <hr>
+  </div>
+  <div id="2">
+    <h2 class="text-center">Citas Anteriores</h2>
+    <hr>
+  </div>
 </div>
-<style>
-    input{
-      width:50px;
-    }
-</style>
-<div class="text-center mt-3 mb-5"><button class="btn" onclick="$('#mensaje1').text('Cambios guardados')">Guardar cambios</button><p id="mensaje1" class="mt-1 mb-1 text-danger"></p></div>
-<script>
-  function cargaP(){
-  $.getJSON("Productos.json", function(productos){
-      $.each(productos["Productos"],function(idx,producto){
-           $("#productos").append("<tr><th scope='row'>"+producto["ID"]+"</th><td>"+producto["Nombre"]+"</td><td>"+"<input type='text' value='"+producto["Unidades"]+"' class='input' style=''>");
 
-      })
-  })
-}
-</script>
 <!--seccion: donde encontrarnos-->
      <div class="container-fluid">
         <div class ="row">

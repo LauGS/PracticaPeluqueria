@@ -73,8 +73,8 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CLIENTES</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="../Estetica/dep.html">Listado</a>
-                          <a class="dropdown-item" href="../Estetica/man.html">Promociones</a>
+                          <a class="dropdown-item" href="clientes.html">Listado</a>
+                          <a class="dropdown-item" href="#">Promociones</a>
                         </div>
                 </li>
                 <li class="nav-item">
@@ -125,37 +125,36 @@
            API.open();
         });
      });
+     function confirmar(){
+       var opcion = confirm('El mensaje se enviará a todos los usuarios, ¿Estás seguro de que quieres enviarlo así?');
+      if(opcion){
+          if($("#men").length>0){
+            $("#men").remove();
+            $("#mensaje").append("<p class='text-success m-3' id='men'>Has enviado a todos los clientes el mensaje</p>");
+          }
+          else{
+        $("#mensaje").append("<p class='text-success m-3' id='men'>Has enviado a todos los clientes el mensaje</p>");}
+      }else{
+        if($("#men").length>0){
+          $("#men").remove();
+        $("#mensaje").append("<p class='text-danger m-3' id='men'>No has enviado el mensaje</p>");}
+        else{
+          $("#mensaje").append("<p class='text-danger m-3' id='men'>No has enviado el mensaje</p>");
+        }
+      }
+     }
   </script>
-<h1 class="text-center">Lista de productos</h1>
-<div class="text-center mt-3"><button class="btn" onclick="$('#mensaje').text('Cambios guardados')">Guardar cambios</button><p id="mensaje" class="mt-1 mb-1 text-danger"></p></div>
-<div class="container mt-5 mb-5">
-    <table class="table">
-      <thead>
-        <th scope="row">ID</th>
-        <th>Nombre</th>
-        <th>Unidades</th>
-      </thead>
-      <tbody id="productos">
+<h1 class="text-center">Crear mensaje de promoción</h1>
 
-      </tbody>
-    </table>
+<div class="container" style="margin-top:5%;margin-bottom:7%;">
+  <div class="form-group" id="mensaje">
+    <label for="exampleFormControlTextarea3">Escribe aqui el mensaje que le llegará a todos los usuarios al correo</label>
+    <textarea class="form-control" id="exampleFormControlTextarea3" rows="7"></textarea>
+  </div>
+  <button class="btn" onclick="confirmar()">Enviar</button>
 </div>
-<style>
-    input{
-      width:50px;
-    }
-</style>
-<div class="text-center mt-3 mb-5"><button class="btn" onclick="$('#mensaje1').text('Cambios guardados')">Guardar cambios</button><p id="mensaje1" class="mt-1 mb-1 text-danger"></p></div>
-<script>
-  function cargaP(){
-  $.getJSON("Productos.json", function(productos){
-      $.each(productos["Productos"],function(idx,producto){
-           $("#productos").append("<tr><th scope='row'>"+producto["ID"]+"</th><td>"+producto["Nombre"]+"</td><td>"+"<input type='text' value='"+producto["Unidades"]+"' class='input' style=''>");
 
-      })
-  })
-}
-</script>
+
 <!--seccion: donde encontrarnos-->
      <div class="container-fluid">
         <div class ="row">
