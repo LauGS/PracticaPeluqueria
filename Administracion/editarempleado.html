@@ -41,12 +41,12 @@
 </head>
 
 <!--Aqui va el cuerpo de texto y la pagina en general-->
-<body>
+<body onload="cargaP()">
   <div id="my-page">
     <div id="my-header">
     <nav class="navbar navbar-expand-lg sticky-top">
 
-      <a class="navbar-brand" href="#" style="font-family: 'Fjalla One'; color:black;">
+      <a class="navbar-brand" href="empelados.html" style="font-family: 'Fjalla One'; color:black;">
        <img class="logo" border="0" alt="Logo peluqueria" src="../Imagenes/logo.jpg">
        Admin
       </a>
@@ -59,7 +59,7 @@
 
             <ul class="navbar-nav mr-auto mm-nolistview">
               <li class="nav-item">
-                  <a class="nav-link" href="#">EMPLEADOS</a>
+                  <a class="nav-link" href="empleados.html">EMPLEADOS</a>
               </li>
 
                 <li class="nav-item dropdown">
@@ -123,87 +123,61 @@
         });
      });
   </script>
-<h1 class="text-center">Lista de empleados</h1>
-<div class="container">
-  <div class="card-deck">
-    <div class="card">
-      <img src="ImagenesAdmin/1.jpg" class="img-fluid" >
-      <div class="card-body">
-        <p class="text-center"><strong>Michael cera</strong></p>
-        <hr>
-        <p>Jornada completa de 9 a 5</p>
-        <hr>
-        <p>Libra los lunes y los domingos</p>
-      </div>
-      <button class="btn m-3" onclick="editarEmpleado('Michael Cera')">Editar</button-btn>
-    </div>
-    <div class="card">
-      <img src="ImagenesAdmin/2.jpg" class="img-fluid">
-      <div class="card-body">
-        <p class="text-center"><strong>Jorge Sánchez</strong></p>
-        <hr>
-        <p>Jornada completa de 9 a 5</p>
-        <hr>
-        <p>Libra los martes y los domingos</p>
-      </div>
-      <button class="btn m-3" onclick="editarEmpleado('Jorge Sanchez')">Editar</button-btn>
-    </div>
-    <div class="card">
-      <img src="ImagenesAdmin/3.jpg" class="img-fluid">
-      <div class="card-body">
-          <p class="text-center"><strong>Sara Rodriguez</strong></p>
-          <hr>
-          <p>Jornada completa de 9 a 5</p>
-          <hr>
-          <p>Libra los miércoles y los domingos</p>
-        </div>
-        <button class="btn m-3" onclick="editarEmpleado('Sara Rodriguez')">Editar</button-btn>
-      </div>
+<h1 class="text-center">Editar Empleado</h1>
+<div class="container border border-secondary p-1 rounded mt-3" style="margin-bottom:15%; ">
+  <div id="nombre"></div>
+  <form>
+    <div class="form-group" style="padding-left:15%; ">
+      <label>Dias libres</label>
+      <select class="form-control ml-3" style="width:150px;">
+        <option value="">Lunes</option>
+        <option value="">Martes</option>
+        <option value="">Miercoles</option>
+        <option value="">Jueves</option>
+        <option value="">Viernes</option>
+        <option value="">Sabado</option>
+        <option value="">Domingo</option>
+      </select>
     </div>
 
-  <div class="card-deck">
-    <div class="card">
-      <img src="ImagenesAdmin/4.jpg" class="img-fluid">
-      <div class="card-body">
-          <p class="text-center"><strong>Iván Rodriguez</strong></p>
-          <hr>
-          <p>Jornada completa de 5 a 9</p>
-          <hr>
-          <p>Libra los jueves y los sábados</p>
-        </div>
-        <button class="btn m-3" onclick="editarEmpleado('Ivan Rodriguez')">Editar</button-btn>
-      </div>
-
-    <div class="card">
-      <img src="ImagenesAdmin/5.jpg" class="img-fluid">
-        <div class="card-body">
-          <p class="text-center"><strong>Sandra Pérez</strong></p>
-          <hr>
-          <p>Jornada completa de 5 a 9</p>
-          <hr>
-          <p>Libra los miércoles y los viernes</p>
-        </div>
-        <button class="btn m-3" onclick="editarEmpleado('Sandra Perez')">Editar</button-btn>
-      </div>
-
-    <div class="card">
-      <img src="ImagenesAdmin/6.jpg" class="img-fluid">
-        <div class="card-body">
-          <p class="text-center"><strong>Luisa Domínguez</strong></p>
-          <hr>
-          <p>Jornada completa de 5 a 9</p>
-          <hr>
-          <p>Libra los sábados y los domingos</p>
-        </div>
-        <button class="btn m-3" onclick="editarEmpleado('Luisa Dominguez')">Editar</button-btn>
-      </div>
+    <div class="form-group" style="padding-left:15%; ">
+      <p><strong>Turno:</strong></p>
+      <label>De</label>
+    <select name="hora" id="hora" class="form-control ml-3" style="width:150px">
+        <option value="9">9:00</option>
+        <option value="10">10:00</option>
+        <option value="11">11:00</option>
+        <option value="12">12:00</option>
+        <option value="13">13:00</option>
+        <option value="14">14:00</option>
+        <option value="16">16:00</option>
+        <option value="17">17:00</option>
+        <option value="18">18:00</option>
+        <option value="19">19:00</option>
+        <option value="20">20:00</option>
+    </select>
+    <label>Hasta</label>
+    <select name="hora" id="hora" class="form-control ml-3" style="width:150px">
+        <option value="9">9:00</option>
+        <option value="10">10:00</option>
+        <option value="11">11:00</option>
+        <option value="12">12:00</option>
+        <option value="13">13:00</option>
+        <option value="14">14:00</option>
+        <option value="16">16:00</option>
+        <option value="17">17:00</option>
+        <option value="18">18:00</option>
+        <option value="19">19:00</option>
+        <option value="20">20:00</option>
+    </select>
     </div>
-  </div>
+  </form>
+  <button class="btn" style="margin-left:60%;margin-bottom:3%;" onclick="location.href='empleados.html'">Guardar Cambios</button>
 </div>
+
 <script>
-  function editarEmpleado(empleado){
-    window.sessionStorage.setItem('empleado',empleado);
-    location.href= 'editarempleado.html';
+  function cargaP(){
+  $("#nombre").append("<h2 class='text-center'>"+window.sessionStorage.getItem('empleado')+"</h2>");
   }
 </script>
 
