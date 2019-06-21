@@ -112,18 +112,6 @@
   </div>
 
 
-  <style>
-  button.red{
-  background-color:white;
-  border-color:red;
-  color:red;
-  }
-  button.red:hover{
-    background-color:red;
-    border-color:red;
-    color:white;
-  }
-  </style>
   <script>
      $(document).ready(function() {
         $("#my-menu").mmenu({
@@ -135,85 +123,67 @@
            API.open();
         });
      });
-
-     function cargaP(){
-      //window.sessionStorage.setItem("canceladas",["Carlos"]);
-       $.getJSON("Citas.json", function(citas){
-           $.each(citas["Citas"],function(idx,cita){
-             if(noEstaCancelada(cita["IDU"])){
-              comprobar(cita);
-            }
-           })
-       })
-     }
-     function cancelar(cita){
-           var value = cita.value;
-           if(confirm("¿Estás seguro de que quieres cancelar esta cita?")){
-             if(window.sessionStorage.getItem("canceladas") != null){
-               var canceladas = window.sessionStorage.getItem("canceladas");
-               canceladas.push(value.toString());
-               window.sessionStorage.setItem("canceladas",canceladas);
-               location.reload();
-              }
-              else{
-                window.sessionStorage.setItem("canceladas",[value.toString()]);
-                location.reload();
-              }
-           }
-     }
-     function noEstaCancelada(idu){
-       if(window.sessionStorage.getItem("canceladas") != null){
-         var canceladas = window.sessionStorage.getItem("canceladas");
-         return !canceladas.includes( idu.toString() ) ;
-       }
-       else return true;
-     }
-
-     function editar(cita){
-       var value = cita.value;
-       window.sessionStorage.setItem('citaeditar', value);
-       location.href= 'editarcita.html';
-     }
-
-     function comprobar(cita){
-       var parts = cita["fecha"].split("-");
-       var dt = new Date(parseInt(parts[2], 10),
-                  parseInt(parts[1], 10) - 1,
-                  parseInt(parts[0], 10));
-       var hoy = Date.now();
-
-       if(dt>hoy){
-         $("#1").append("<p><strong>Nombre:</strong>  "+cita["IDU"]+"  "+"<strong>   Fecha:  </strong>"+ cita["fecha"] + "<strong>  Servicios:  </strong></p>");
-         for(var i = 0; i< cita["servicios"].length ; i++){
-           $("#1").append("<p class='pl-3'>" + cita["servicios"][i] + "</p>");
-         }
-         $("#1").append("<button class = 'btn m-3' value="+cita["IDU"]+" onclick='editar(this)'>Editar Cita</button>");
-         $("#1").append("<button class = 'btn red' value="+cita["IDU"]+" onclick='cancelar(this)'>Cancelar Cita</button>");
-         $("#1").append("<hr>");
-       }
-       else{
-         $("#2").append("<p class='text-secondary'><strong>Nombre:  </strong>"+cita["IDU"]+"  "+"<strong>   Fecha:  </strong>"+ cita["fecha"] + "<strong>  Servicios:  </strong></p>");
-         for(var i = 0; i< cita["servicios"].length ; i++){
-           $("#2").append("<p class='pl-3 text-secondary'>" + cita["servicios"][i] + "</p>");
-         }
-         $("#2").append("<hr>");
-       }
-
-     }
   </script>
-<h1 class="text-center">Gestión de citas</h1>
 
-<div class="container">
-  <div id="1">
-    <h2 class="text-center">Citas pendientes</h2>
-    <hr>
-  </div>
-  <div id="2">
-    <h2 class="text-center">Citas Anteriores</h2>
-    <hr>
-  </div>
+<h1 class="text-center">Editar Producto</h1>
+<div class="container mt-5 mb-5">
+    <div id="producto">
+      <div class="container border border-secondary p-3 rounded m-3">
+              <form>
+              <h2 id="NombreP" class= "text-center"></h2>
+              <div class="form-group">
+          <label>Nombre del Producto</label>
+          <input class="form-control" id = "Nombre" placeholder="Nombre">
+        </div>
+        <div class="form-group">
+          <label>Precio</label>
+          <input class="form-control"  placeholder="Precio" id ="Precio">
+        </div>
+        <div class="form-group">
+          <label>Tipo</label>
+          <input class="form-control"  placeholder="Tipo" id="Tipo">
+        </div>
+        <div class="form-group">
+          <label>Marca</label>
+          <input class="form-control" placeholder="Marca" id="Marca">
+        </div>
+      </form>
+      <button class="btn"  style = "margin-left:90%;margin-bottom:1%;" onclick="alerta()">Aceptar</button>
+    </div>
 </div>
+</div>
+<script>
 
+
+function cargaP(){
+  var prod;
+    $.getJSON("Productos.json", function(productos){
+        $.each(productos["Productos"],function(idx,producto){
+          if(producto["ID"].toString().localeCompare(window.sessionStorage.getItem("producto"))==0){
+          prod = producto;
+          }
+        })
+    })
+
+    setTimeout(function () {
+      $("#NombreP").append(prod["Nombre"]);
+      $("#Nombre").attr("value",prod["Nombre"]);
+      $("#Precio").attr("value",prod["Precio"]);
+      $("#Tipo").attr("value",prod["Tipo"]);
+      $("#Marca").attr("value",prod["Marca"]);
+
+    }, 100);
+}
+  function comparar(uno,dos){
+    return uno.toString().localeCompare(dos)==0;
+  }
+  function alerta(){
+    if(confirm("¿Estás seguro de los cambios realizados?")){
+      location.href = "productos.html";
+    }
+  }
+
+</script>
 <!--seccion: donde encontrarnos-->
      <div class="container-fluid">
         <div class ="row">

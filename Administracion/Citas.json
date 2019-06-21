@@ -3,31 +3,31 @@
         {
             "IDU": "Carlos",
             "servicios": ["Tinte permanente", "Corte con tijera"],
-            "fecha":"15-01-2019",
+            "fecha":"15-08-2019",
             "hora":"9:30"
         },
         {
           "IDU": "Michael",
           "servicios": ["Corte con maquinilla"],
-          "fecha":"15-04-2019",
+          "fecha":"15-07-2019",
           "hora":"13:00"
         },
         {
             "IDU": "Carlos",
             "servicios": ["Tinte permanente", "Corte con tijera"],
-            "fecha":"15-05-2019",
+            "fecha":"15-10-2019",
             "hora":"12:00"
         },
         {
             "IDU": "Michael",
             "servicios": ["Tinte permanente", "Corte con tijera"],
-            "fecha":"15-04-2019",
+            "fecha":"15-11-2019",
             "hora":"13:00"
         },
         {
             "IDU": "Paco",
             "servicios": ["Tinte permanente", "Corte con tijera"],
-            "fecha":"20-04-2019",
+            "fecha":"20-09-2019",
             "hora":"15:30"
         },
         {

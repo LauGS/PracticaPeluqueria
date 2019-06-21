@@ -144,11 +144,18 @@
   function cargaP(){
   $.getJSON("Productos.json", function(productos){
       $.each(productos["Productos"],function(idx,producto){
-           $("#productos").append("<tr><th scope='row'>"+producto["ID"]+"</th><td>"+producto["Nombre"]+"</td><td>"+producto["Precio"]+"€</td><td>"+producto["Marca"]+"</td></tr>");
+           $("#productos").append("<tr><th scope='row'>"+producto["ID"]+"</th><td>"+producto["Nombre"]+"</td><td>"+producto["Precio"]+"€</td><td>"+producto["Marca"]+"</td><td><button class='btn' value="+producto["ID"]+" onclick='butclick(this)'>Editar</button></td></tr>");
 
       })
   })
 }
+
+function butclick(button){
+    var value = button.value;
+    window.sessionStorage.setItem('producto', value);
+    location.href= 'editarproducto.html';
+}
+
 </script>
 <!--seccion: donde encontrarnos-->
      <div class="container-fluid">
