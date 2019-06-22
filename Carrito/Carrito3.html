@@ -80,7 +80,7 @@
                         </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../Tienda/tienda.html">TIENDA</a>
+                    <a class="nav-link" href="../Tienda/tienda.html">TIENDA <i class="fas fa-store-alt"></i></a>
                 </li>
 
                 <li class="nav-item">
@@ -178,7 +178,7 @@
             });
 
             setTimeout(function(){
-                $("#carrito").append("<hr id='total1'><p class='pl-5 text-secondary' id='total'>TOTAL= " + window.sessionStorage.getItem('total') + "$</p>");
+                $("#carrito").append("<hr id='total1'><p class='pl-5 text-secondary' id='total'>TOTAL= " + window.sessionStorage.getItem('total') + "€</p>");
             }, 500);
         }
 
@@ -195,7 +195,7 @@ function comparar(producto){
     if(carro[i]==producto["ID"]){
       nombre = producto["Nombre"];
       precio = producto["Precio"];
-      $("#carrito").append("<p class ='pl-3 text-secondary' id='" + producto["ID"]+carro[i] + "'><i class='fas fa-angle-right'></i> " + nombre + " " + precio +"</p>");
+      $("#carrito").append("<p class ='pl-3 text-secondary' id='" + producto["ID"]+carro[i] + "'><i class='fas fa-angle-right'></i> " + nombre + " " + precio +"€</p>");
       }
     }
   }
