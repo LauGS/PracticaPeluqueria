@@ -83,7 +83,7 @@
                         </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../Tienda/tienda.html">TIENDA</a>
+                    <a class="nav-link" href="../Tienda/tienda.html">TIENDA <i class="fas fa-store-alt"></i></a>
                 </li>
 
                 <li class="nav-item">
@@ -126,10 +126,8 @@
   <script>
      $(document).ready(function() {
         $("#my-menu").mmenu({
-
         });
         var API = $("#my-menu").data( "mmenu" );
-
         $("#my-button").click(function() {
            API.open();
         });
@@ -263,7 +261,7 @@
               <option value="Peeling">Peeling</option>
             </select>
         </div>
-        <div class="col m-2" id ="preciol" >0$</div>
+        <div class="col m-2" id ="preciol" >0€</div>
    </div>
 
     <hr>
@@ -314,25 +312,20 @@
          console.log("cambio1");
         if($("#formtinte").val()=='Tinte vegetal'){
                 $("#preciot").text("12€");
-
         }
         if($("#formtinte").val()=='Tinte permanente'){
                 $("#preciot").text("15€");
-
         }
         if($("#formtinte").val()=='Mechas'){
                 $("#preciot").text("20€");
-
         }
         if($("#formtinte").val()=='ninguno'){
                 $("#preciot").text("0€");
-
         }
         if($("#formtinte").val()!='ninguno'){
             add(0,$("#formtinte").val());
         }
     })
-
      $("#hora").change(function(){
          var fecha = JSON.parse(window.sessionStorage.getItem('fecha'));
          fecha[1] = $("#hora option:selected").text();
@@ -343,165 +336,111 @@
          fecha[0] = $('#flat').val();
          window.sessionStorage.setItem('fecha',JSON.stringify(fecha));
      })
-
-
        $("#formrizos").change(function(){
         if($("#formrizos").val()=='ninguno'){
                 $("#precior").text("0€");
-
         }
         if($("#formrizos").val()=='Permanente'){
                 $("#precior").text("15€");
-
         }
         if($("#formrizos").val()=='Moldeador'){
                 $("#precior").text("20€");
-
         }
-
         if($("#formrizos").val()!='ninguno'){
             add(1,$("#formrizos").val());
         }
-
     })
-
        $("#formcorte").change(function(){
         if($("#formcorte").val()=='ninguno'){
                 $("#precioc").text("0€");
-
         }
         if($("#formcorte").val()=='Corte con navaja'){
                 $("#precioc").text("12€");
-
         }
         if($("#formcorte").val()=='Corte con maquinilla'){
                 $("#precioc").text("10€");
-
         }
         if($("#formcorte").val()=='Corte con tijera'){
                 $("#precioc").text("15€");
-
         }
-
-
         if($("#formcorte").val()!='ninguno'){
             add(2,$("#formcorte").val());
         }
-
     })
-
        $("#formpeinado").change(function(){
         if($("#formpeinado").val()=='Peinado con secador y cepillo'){
                 $("#preciop").text("15€");
-
         }
         if($("#formpeinado").val()=='Peinado con secador y plancha'){
                 $("#preciop").text("20€");
-
         }
         if($("#formpeinado").val()=='Peinado con productos'){
                 $("#preciop").text("25€");
-
         }
         if($("#formpeinado").val()=='ninguno'){
                 $("#preciop").text("0€");
-
-
         }
-
         if($("#formpeinado").val()!='ninguno'){
             add(3,$("#formpeinado").val());
-
         }
     })
-
     ////ESTETICA
-
        $("#formdep").change(function(){
         if($("#formdep").val()=='Depilacion de axilas'){
                 $("#preciod").text("20€");
-
         }
         if($("#formdep").val()=='Depilacion de piernas'){
                 $("#preciod").text("20€");
-
         }
         if($("#formdep").val()=='Depilacion de ingles'){
                 $("#preciod").text("32€");
-
         }
         if($("#formdep").val()=='ninguno'){
-
           $("#preciod").text("0€");
         }
-
-
         if($("#formdep").val()!='ninguno'){
             add(4,$("#formdep").val());
         }
         })
-
-
-
         $("#formman").change(function(){
         if($("#formman").val()=='Manicura'){
                 $("#preciom").text("10€");
-
         }
         if($("#formman").val()=='Pedicura'){
                 $("#preciom").text("12€");
-
         }
         if($("#formman").val()=='Manicura y pedicura'){
                 $("#preciom").text("20€");
-
         }
         if($("#formman").val()=='ninguno'){
                 $("#preciom").text("0€");
-
         }
-
-
         if($("#formman").val()!='ninguno'){
             add(5,$("#formman").val());
         }
          })
-
-
-
         $("#formlimp").change(function(){
         if($("#formlimp").val()=='Limpieza facial'){
                 $("#preciol").text("15€");
-
         }
         if($("#formlimp").val()=='Ionizacion'){
                 $("#preciol").text("35€");
-
         }
         if($("#formlimp").val()=='Radiofrecuencia'){
                 $("#preciol").text("40€");
-
         }
         if($("#formlimp").val()=='ninguno'){
                 $("#preciol").text("0€");
-
         }
         if($("#formlimp").val()=='Peeling'){
-
           $("#preciol").text("25€");
         }
-
         if($("#formlimp").val()!='ninguno'){
             add(6,$("#formlimp").val());
         }
-
     })
-
-
      function iniP(){
          // array posiciones
-
-
          //tinte 0
          //corte 1
          //rizado 2
@@ -509,13 +448,10 @@
          //depilacion 4
          //limpieza 5
          //manicura 6
-
          //fecha
-
          //dia 0
          //hora 1
          console.log(window.sessionStorage.getItem('log'));
-
          if (window.sessionStorage.getItem('log') == null) {
            window.sessionStorage.setItem('log', 'false'); //si no esta la variable log la pone a false
          }
@@ -532,14 +468,12 @@
          $("#carro").text('CARRITO ' + carro1.length + " "); //#("carro") busca elementos con id carro asi que la parte del nav de carrito tiene que tener ese id
          $("#carro").append('<i class="fas fa-shopping-cart"></i>'); //pone el numero de elementos en el carro y añade el icono
            }
-
          var servicio = ['-1','-1','-1','-1','-1','-1','-1'];
          var fecha = ['-1','9:00'];
          window.sessionStorage.setItem('servicios',JSON.stringify(servicio));
          window.sessionStorage.setItem('fecha',JSON.stringify(fecha));
     }
      function add(tipo,objeto){
-
              var servicio = JSON.parse(window.sessionStorage.getItem('servicios'));
              servicio[tipo] = objeto ;
              window.sessionStorage.setItem('servicios',JSON.stringify(servicio));
@@ -550,7 +484,6 @@
     $("#formtinte").change(function(){
       add($("#formtinte").val());
     })
-
     function iniP(){
                var obj = {'servicios': []};
                window.sessionStorage.setItem('servicios',JSON.stringify(obj));
@@ -561,7 +494,6 @@
              obj['servicios'].push(add);
              window.sessionStorage.setItem('servicios',JSON.stringify(obj));
     }
-
     function deleted(del){
          var obj = JSON.parse(window.sessionStorage.getItem('servicios'));
         if(obj['servicios'].indexOf(del)!=-1){
@@ -570,9 +502,7 @@
             console.log(del +'eliminado');
             parrafos();
         }
-
     }
-
     function contar(e){
         var obj = JSON.parse(window.sessionStorage.getItem('servicios'));
         var n=0;
@@ -586,7 +516,6 @@
     function parrafos(){
         var obj = JSON.parse(window.sessionStorage.getItem('servicios'));
         $("#ListaServicios").empty();
-
         if(obj['servicios'].length==0){
             $("#ListaServicios").append("<p id=\"text-empty\" class =\"text-danger text-center\"> Ningún servicio seleccionado</p>");
         }
@@ -595,10 +524,7 @@
                     $("#ListaServicios").append("<p class=\"text-center text-danger\"> Has añadido el servicio de peluqueria "+ servicio + " " + " para " + contar(servicio) +" persona\(s\)" +"</p>");
             })
         }
-
-
     }
-
     Array.prototype.unique=function(a){
         return function(){return this.filter(a)}}(function(a,b,c){return c.indexOf(a,b+1)<0
     });

@@ -80,7 +80,7 @@
                         </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../Tienda/tienda.html">TIENDA</a>
+                    <a class="nav-link" href="../Tienda/tienda.html">TIENDA <i class="fas fa-store-alt"></i></a>
                 </li>
 
                 <li class="nav-item">
@@ -258,10 +258,10 @@
         }
 
         if(servicio[i]!='-1'){
-            $("#cita").append("<p class='pl-5'><i class='fas fa-angle-right'></i>  "+ servicio[i] + " " + precio + "$" + "<p>");
+            $("#cita").append("<p class='pl-5'><i class='fas fa-angle-right'></i>  "+ servicio[i] + " " + precio + "€" + "<p>");
         }
     }
-     $("#cita").append("<hr><p class='pl-5'>TOTAL= " + total +"$");
+     $("#cita").append("<hr><p class='pl-5'>TOTAL= " + total +"€");
     $("#cita").append("<br><p class='pl-3'> A las "+ fecha[1] +" del dia " + fecha[0] + "<p>");
 
     }
