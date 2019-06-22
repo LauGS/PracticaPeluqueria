@@ -7,6 +7,7 @@ html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+
 }
 
 label{
@@ -149,12 +150,13 @@ h3 {
       font: 500 35px 'Open Sans Condensed', sans-serif;
   }
 
+h4{
+    font-family: 'Playfair Display', serif;
+}
 h5{
     font: 600 23px 'Open Sans Condensed', sans-serif;
 }
-h4{
-      font-family: 'Playfair Display', serif;
-}
+
 
 h6{
       font-family: 'Playfair Display', serif;
@@ -259,3 +261,14 @@ hr {
 h2.text-center {
   padding-top: 15px;
 }
+
+h7{
+    text-shadow: 2px 2px #000000;
+    font: 600 23px 'Open Sans Condensed', sans-serif;
+}
+
+h8{
+    text-shadow: 2px 2px #000000;
+    font: 400 20px 'Open Sans Condensed', sans-serif;
+}
+

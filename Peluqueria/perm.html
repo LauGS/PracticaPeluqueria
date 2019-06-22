@@ -88,7 +88,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="../Tienda/tienda.html">TIENDA</a>
+              <a class="nav-link" href="../Tienda/tienda.html">TIENDA <i class="fas fa-store-alt"></i></a>
             </li>
 
             <li class="nav-item">
@@ -215,6 +215,25 @@ Los tintes contienen una variedad de elementos, como agua desmineralizada, alcoh
     </div>
   </div>
 
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Mas info abajo</button>
+
+  <script>
+
+    var div = document.getElementById('myBtn');
+    if (div.scrollTop == 0) {
+      document.getElementById("myBtn").style.display = "block";
+    }
+
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "none";
+      } else {
+        document.getElementById("myBtn").style.display = "block";
+      }
+    }
+  </script>
 
 
 
