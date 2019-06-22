@@ -175,9 +175,27 @@
               </div>
             </form>
 
-        <button class="btn" onclick="location.href='Carrito3.html'">Realizar pago</button>
+        <button class="btn" onclick="comprobar()">Realizar pago</button>
+        <p class="text-danger">Todos los campos son obligatorios</p>
     </div>
 <script>
+function comprobar(){
+  var condicion = true;
+    $( "input" ).each(function( index ) {
+      if(condicion){
+        if($( this ).val().length == 0){
+          if(condicion){
+            alert("Hay campos vacíos");
+            condicion = false;
+          }
+        }
+      }
+  });
+  if (condicion){
+    location.href='Carrito3.html';
+  }
+}
+
   function iniP(){
     if (window.sessionStorage.getItem('log') == null) {
       window.sessionStorage.setItem('log', 'false'); //si no esta la variable log la pone a false

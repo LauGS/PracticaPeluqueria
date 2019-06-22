@@ -196,6 +196,7 @@
 <button class="btn" onclick="registro()">
     Entrar
 </button>
+<p class="text-danger">Todos los campos son obligatorios</p>
     </div>
 </div>
 </div>
@@ -204,6 +205,7 @@
 
 <script>
   function registro(){
+    if(comprobar()){
       var nombre = $("#Nombre").val();
       var apellido = $("#Apellidos").val();
       var telef = $("#Telefono").val();
@@ -216,9 +218,23 @@
        window.sessionStorage.setItem('apellidos',apellido);
        window.sessionStorage.setItem('telefono',telef);
        location.href = "../index.html";
-
+}
 
 }
+
+function comprobar(){
+  var condicion = true;
+    $( "input" ).each(function( index ) {
+      if(condicion){
+        if($( this ).val().length == 0){
+            alert("Hay campos vacíos");
+            condicion = false;
+        }
+      }
+  });
+  return condicion;
+}
+
 </script>
 <!--seccion: donde encontrarnos-->
      <div class="container-fluid">
