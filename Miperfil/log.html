@@ -201,35 +201,34 @@
           </div>
 
           <script>
-            $("#entrar").click(function () {
-              $.getJSON("Usuarios.json", function (usuarios) {
-                $.each(usuarios["Usuarios"], function (idx, usuario) {
-                  comprobar(usuario);
-                });
-              });
-            });
-
-    function comprobar(usuario){
-        var user = $("#email").val();
-        var pass = $("#pass").val();
-
-        if(usuario["Correo"]== user){
-            if(usuario["Pass"]==pass){
-                window.sessionStorage.setItem('log',true);
-                window.sessionStorage.setItem('user',user);
-                window.sessionStorage.setItem('nombre',usuario["Nombre"]);
-                window.sessionStorage.setItem('apellidos',usuario["Apellidos"]);
-                window.sessionStorage.setItem('telefono',usuario["Telefono"]);
-                window.sessionStorage.setItem('admin',usuario["Admin"]);
-                location.href = "../index.html";
-
-              if ($("#menrror").length == 0) {
-                $("#error").append("<p id='menrror'>No existe este usuario</p>");
+          $("#entrar").click(function(){
+              $.getJSON("../Miperfil/Usuarios.json", function(usuarios){
+                    $.each(usuarios["Usuarios"],function(idx,usuario){
+                          comprobar(usuario);
+                    });
+                  });
+              if($("#menrror").length == 0){
+              $("#error").append("<p id='menrror'>No existe este usuario</p>");
               }
-            }
-          }
-        }
 
+          })
+
+          function comprobar(usuario){
+              var user = $("#email").val();
+              var pass = $("#pass").val();
+
+              if(usuario["Correo"]== user){
+                  if(usuario["Pass"]==pass){
+                      window.sessionStorage.setItem('log',true);
+                      window.sessionStorage.setItem('user',user);
+                      window.sessionStorage.setItem('nombre',usuario["Nombre"]);
+                      window.sessionStorage.setItem('apellidos',usuario["Apellidos"]);
+                      window.sessionStorage.setItem('telefono',usuario["Telefono"]);
+                      window.sessionStorage.setItem('admin',usuario["Admin"]);
+                      location.href = "Carrito2.html";
+                  }
+              }
+          }
       </script>
 
         </div>
