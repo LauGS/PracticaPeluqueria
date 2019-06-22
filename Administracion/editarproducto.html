@@ -149,8 +149,10 @@
         </div>
       </form>
       <button class="btn"  style = "margin-left:90%;margin-bottom:1%;" onclick="alerta()">Aceptar</button>
+      <p class = "text-danger">Todos los campos son obligatorios</p>
     </div>
 </div>
+
 </div>
 <script>
 
@@ -178,9 +180,24 @@ function cargaP(){
     return uno.toString().localeCompare(dos)==0;
   }
   function alerta(){
+    if(comprobar()){
     if(confirm("¿Estás seguro de los cambios realizados?")){
       location.href = "productos.html";
     }
+  }
+  }
+
+  function comprobar(){
+    var condicion = true;
+      $( "input" ).each(function( index ) {
+        if(condicion){
+          if($( this ).val().length == 0){
+              alert("Hay campos vacíos");
+              condicion = false;
+          }
+        }
+    });
+    return condicion;
   }
 
 </script>

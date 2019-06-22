@@ -110,7 +110,18 @@
         <li><a href="../index.html" id="perfilm">VOLVER</a></li>
       </ul>
   </div>
-
+  <style>
+  button.red{
+  background-color:white;
+  border-color:red;
+  color:red;
+  }
+  button.red:hover{
+    background-color:red;
+    border-color:red;
+    color:white;
+  }
+  </style>
 
   <script>
      $(document).ready(function() {
@@ -147,10 +158,46 @@
   function cargaP(){
   $.getJSON("Usuarios.json", function(usuarios){
       $.each(usuarios["Usuarios"],function(idx,usuario){
-           $("#usuarios").append("<tr><th scope='row'>"+usuario["Nombre"]+"</th><td>"+usuario["Apellidos"]+"</td><td>"+usuario["Telefono"]+"</td><td>"+usuario["Correo"]+"</td></tr>");
+          if(noEstaCancelada(usuario["Nombre"]))
+           $("#usuarios").append("<tr><th scope='row'>"+usuario["Nombre"]+"</th><td>"+usuario["Apellidos"]+"</td><td>"+usuario["Telefono"]+"</td><td>"+usuario["Correo"]+"</td><td><button class='btn' onclick='editarClientes(this)' value="+usuario["Nombre"]+">Editar</button></td><td><button class = 'btn red' value="+usuario["Nombre"]+" onclick='cancelar(this)'>Eliminar</button></td></tr>");
 
       })
   })
+}
+function cancelar(cliente){
+      var value = cliente.value;
+
+      if(confirm("¿Estás seguro de que quieres eliminar a este cliente?")){
+        if(window.sessionStorage.getItem("eliminados") != null){
+          var canceladas = new Array(window.sessionStorage.getItem("eliminados"));
+
+          var val = value.toString();
+          canceladas.push(val);
+
+          window.sessionStorage.setItem("eliminados",canceladas);
+          location.reload();
+         }
+
+         else{
+
+           window.sessionStorage.setItem("eliminados",value.toString());
+           location.reload();
+         }
+
+      }
+}
+function noEstaCancelada(idu){
+  if(window.sessionStorage.getItem("eliminados") != null){
+    var canceladas = window.sessionStorage.getItem("eliminados");
+    return !canceladas.includes( idu.toString() ) ;
+  }
+  else return true;
+}
+
+function editarClientes(cliente){
+  var value = cliente.value;
+  window.sessionStorage.setItem('cliente', value);
+  location.href= 'editarcliente.html';
 }
 </script>
 <!--seccion: donde encontrarnos-->

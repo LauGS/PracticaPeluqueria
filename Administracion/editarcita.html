@@ -154,7 +154,7 @@
           <label>Hora</label>
           <input class="form-control"  placeholder="Hora" type="time" id="Hora">
         </div>
-        
+
       </form>
       <div>
         <button class="btn"  style = "margin-left:90%;margin-bottom:1%;" onclick="alerta()">Aceptar</button>
@@ -195,10 +195,26 @@ function cargaP(){
   function comparar(uno,dos){
     return uno.toString().localeCompare(dos)==0;
   }
+
   function alerta(){
+      if(comprobar()){
     if(confirm("¿Estás seguro de los cambios realizados?")){
       location.href = "citas.html";
     }
+  }
+  function comprobar(){
+    var condicion = true;
+      $( "input" ).each(function( index ) {
+        if(condicion){
+          if($( this ).val().length == 0){
+              alert("Hay campos vacíos");
+              condicion = false;
+          }
+        }
+    });
+    return condicion;
+  }
+
   }
   function cancelar(){
       location.href = "citas.html";
