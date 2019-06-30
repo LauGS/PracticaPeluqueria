@@ -187,8 +187,8 @@
          for(var i = 0; i< cita["servicios"].length ; i++){
            $("#1").append("<p class='pl-3'>" + cita["servicios"][i] + "</p>");
          }
-         $("#1").append("<button class = 'btn m-3' value="+cita["IDU"]+" onclick='editar(this)'>Editar Cita</button>");
-         $("#1").append("<button class = 'btn red' value="+cita["IDU"]+" onclick='cancelar(this)'>Cancelar Cita</button>");
+         $("#1").append("<button class = 'btn m-3' value="+cita["IDU"]+" onclick='editar(this)'>Editar Cita <i class='fas fa-edit'></i> </button>");
+         $("#1").append("<button class = 'btn red' value="+cita["IDU"]+" onclick='cancelar(this)'>Cancelar Cita <i class='fas fa-trash-alt'></i> </button>");
          $("#1").append("<hr>");
        }
        else{
