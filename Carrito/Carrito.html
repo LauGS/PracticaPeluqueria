@@ -187,7 +187,7 @@
           $("#carrito").append("<p>Ningún elemento añadido al carrito<p>");
         }else {
           $("#carrito").append("<p>Articulos seleccionados:</p>");
-          $("#boton").append("<button class='btn' onclick='cambioP()' id='elformu'>Continuar con la compra</button>");
+          $("#boton").append("<button class='btn' onclick='cambioP()' id='elformu'>Continuar con la compra <i class='fas fa-arrow-right'></i> </button>");
 
           $.getJSON("../Tienda/Productos.json", function (productos) {
             $.each(productos["Productos"], function (idx, producto) {
