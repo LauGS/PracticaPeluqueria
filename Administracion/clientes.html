@@ -159,7 +159,7 @@
   $.getJSON("Usuarios.json", function(usuarios){
       $.each(usuarios["Usuarios"],function(idx,usuario){
           if(noEstaCancelada(usuario["Nombre"]))
-           $("#usuarios").append("<tr><th scope='row'>"+usuario["Nombre"]+"</th><td>"+usuario["Apellidos"]+"</td><td>"+usuario["Telefono"]+"</td><td>"+usuario["Correo"]+"</td><td><button class='btn' onclick='editarClientes(this)' value="+usuario["Nombre"]+">Editar</button></td><td><button class = 'btn red' value="+usuario["Nombre"]+" onclick='cancelar(this)'>Eliminar</button></td></tr>");
+           $("#usuarios").append("<tr><th scope='row'>"+usuario["Nombre"]+"</th><td>"+usuario["Apellidos"]+"</td><td>"+usuario["Telefono"]+"</td><td>"+usuario["Correo"]+"</td><td><button class='btn' onclick='editarClientes(this)' value="+usuario["Nombre"]+">Editar <i class='fas fa-edit'></i> </button></td><td><button class = 'btn red' value="+usuario["Nombre"]+" onclick='cancelar(this)'>Eliminar <i class='fas fa-trash-alt'></i></button></td></tr>");
 
       })
   })

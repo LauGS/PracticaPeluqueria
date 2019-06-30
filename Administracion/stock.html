@@ -124,7 +124,7 @@
      });
   </script>
 <h1 class="text-center">Existencias de productos</h1>
-<div class="text-center mt-3"><button class="btn" onclick="$('#mensaje').text('Cambios guardados')">Guardar cambios</button><p id="mensaje" class="mt-1 mb-1 text-danger"></p></div>
+<div class="text-center mt-3"><button class="btn" onclick="$('#mensaje').text('Cambios guardados')">Guardar cambios <i class="fas fa-save"></i> </button><p id="mensaje" class="mt-1 mb-1 text-danger"></p></div>
 <div class="container mt-5 mb-5">
     <table class="table">
       <thead>
@@ -142,7 +142,7 @@
       width:50px;
     }
 </style>
-<div class="text-center mt-3 mb-5"><button class="btn" onclick="$('#mensaje1').text('Cambios guardados')">Guardar cambios</button><p id="mensaje1" class="mt-1 mb-1 text-danger"></p></div>
+<div class="text-center mt-3 mb-5"><button class="btn" onclick="$('#mensaje1').text('Cambios guardados')">Guardar cambios <i class="fas fa-save"></i> </button><p id="mensaje1" class="mt-1 mb-1 text-danger"></p></div>
 <script>
   function cargaP(){
   $.getJSON("Productos.json", function(productos){

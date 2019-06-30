@@ -137,7 +137,7 @@
      });
   </script>
 <h1 class="text-center">Lista de productos</h1>
-<div class="text-center mt-3"><button class="btn" onclick="location.href='addprod.html'">Añadir nuevo producto</button></div>
+<div class="text-center mt-3"><button class="btn" onclick="location.href='addprod.html'">Añadir nuevo producto <i class="fas fa-plus"></i> </button></div>
 <div class="container mt-5 mb-5">
     <table class="table">
       <thead>
@@ -157,7 +157,7 @@
   $.getJSON("Productos.json", function(productos){
       $.each(productos["Productos"],function(idx,producto){
         if(noEstaCancelada(producto["ID"]))
-           $("#productos").append("<tr><th scope='row'>"+producto["ID"]+"</th><td>"+producto["Nombre"]+"</td><td>"+producto["Precio"]+"€</td><td>"+producto["Marca"]+"</td><td><button class='btn' value="+producto["ID"]+" onclick='butclick(this)'>Editar</button></td><td><button class = 'btn red' value ="+producto["ID"]+" onclick='borrar(this)'>Eliminar</button></td></tr>");
+           $("#productos").append("<tr><th scope='row'>"+producto["ID"]+"</th><td>"+producto["Nombre"]+"</td><td>"+producto["Precio"]+"€</td><td>"+producto["Marca"]+"</td><td><button class='btn' value="+producto["ID"]+" onclick='butclick(this)'>Editar <i class='fas fa-edit'></i> </button></td><td><button class = 'btn red' value ="+producto["ID"]+" onclick='borrar(this)'>Eliminar <i class='fas fa-trash-alt'></i></button></td></tr>");
 
       })
   })
