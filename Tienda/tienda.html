@@ -295,6 +295,28 @@
 </script>
 <!--finprod-->
 
+<button onclick="topFunction()" id="myBtn" title="Go to top">Mas info abajo</button>
+
+<script>
+
+  var div = document.getElementById('myBtn');
+  if (div.scrollTop == 0) {
+    document.getElementById("myBtn").style.display = "block";
+  }
+
+  window.onscroll = function () { scrollFunction() };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("myBtn").style.display = "none";
+    } else {
+      document.getElementById("myBtn").style.display = "block";
+    }
+  }
+
+
+</script>
+
 <!--seccion: donde encontrarnos-->
      <div class="container-fluid">
         <div class ="row">
