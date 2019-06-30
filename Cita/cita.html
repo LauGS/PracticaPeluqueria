@@ -267,23 +267,82 @@
     <hr>
        <h2 class="text-center m-4 mb-5">Fecha de la cita</h2>
        <div class="container">
-           <div class="form-row">
+
           <h5 class="m-3">Introduzca una fecha:</h5>
-          <input type="text" class="text m-3" id="flat"></input>
-          <h5 class="m-3">Introduzca una hora:</h5>
-          <select name="hora" id="hora" class="custom-control m-3">
-              <option value="9">9:00</option>
-              <option value="10">10:00</option>
-              <option value="11">11:00</option>
-              <option value="12">12:00</option>
-              <option value="13">13:00</option>
-              <option value="14">14:00</option>
-              <option value="16">16:00</option>
-              <option value="17">17:00</option>
-              <option value="18">18:00</option>
-              <option value="19">19:00</option>
-              <option value="20">20:00</option>
-          </select>
+          <input type="text" class="text m-3" id="flat" onchange="horas()"></input>
+
+          <div id="horas">
+          </div>
+
+        <script>
+
+          function horas(){
+
+              $("#horas").empty();
+
+            var dia = $("#flat").val();
+            var parts = dia.split("-");
+            var dt =  parseInt(parts[0], 10);
+
+            var once = " <option value='11'>11:00</option>";
+            var doce  = " <option value='12'>12:00</option>";
+            var cuatro  = " <option value='16'>16:00</option>";
+            var seis  = " <option value='18'>18:00</option>";
+            var ocho  = " <option value='20'>20:00</option>";
+            var nueve  =" <option value='9'>9:00</option>";
+
+            if(dt == 6){
+
+              once = "<option value='11' disabled>11:00</option>";
+              doce ="<option value='12' disabled>12:00</option>";
+              ocho = "<option value='20' disabled>20:00</option>";
+              nueve = "<option value='9' disabled>9:00</option>";
+
+            }
+            if(dt == 4){
+              once = "<option value='11' disabled>11:00</option>";
+              doce = "<option value='12' disabled>12:00</option>";
+              seis = "<option value='18' disabled>18:00</option>";
+
+            }
+            if(dt == 5){
+
+              cuatro = "<option value='16' disabled>17:00</option>";
+
+            }
+            if(dt == 7){
+              cuatro = "<option value='16' disabled>11:00</option>";
+              nueve = "<option value='9' disabled>11:00</option>";
+
+            }
+            if(dt == 3){
+              once = "<option value='11' disabled>11:00</option>";
+              doce = "<option value='12' disabled>12:00</option>";
+              ocho = "<option value='20' disabled>20:00</option>";
+            }
+
+
+              $("#horas").append(`<h5 class="m-3">Introduzca una hora:</h5>
+              <select name="hora" id="hora" class="custom-control m-3">
+                  `+nueve+`
+                  <option value="10">10:00</option>
+                  `+once+`
+                  `+doce+`
+                  <option value="13">13:00</option>
+                  <option value="14">14:00</option>
+                  `+cuatro+`
+                  <option value="17">17:00</option>
+                  `+seis+`
+                  <option value="19">19:00</option>
+                  `+ocho+`
+              </select>
+`)
+
+
+          }
+
+        </script>
+
         <script>
             $("#flat").flatpickr({
                 minDate: "today",
@@ -294,7 +353,7 @@
 
        </div>
 
-      </div>
+
     </form>
 
 
@@ -307,6 +366,7 @@
     </form>
 
 </div>
+
 <script>
      $("#formtinte").change(function(){
          console.log("cambio1");
@@ -451,6 +511,7 @@
          //fecha
          //dia 0
          //hora 1
+
          console.log(window.sessionStorage.getItem('log'));
          if (window.sessionStorage.getItem('log') == null) {
            window.sessionStorage.setItem('log', 'false'); //si no esta la variable log la pone a false
