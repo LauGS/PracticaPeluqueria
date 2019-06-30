@@ -143,17 +143,17 @@
 
         <div class="form-group">
           <label>Correo</label>
-          <input class="form-control"  placeholder="Precio" id ="Precio">
+          <input class="form-control"  placeholder="Precio" id ="Precio" type="email">
         </div>
 
         <div class="form-group">
-          <label>Número</label>
-          <input class="form-control"  placeholder="Tipo" id="Tipo">
+          <label>Teléfono</label>
+          <input class="form-control"  placeholder="Tipo" id="Tipo" type="tel">
         </div>
 
         <div class="form-group">
           <label>Puntos</label>
-          <input class="form-control" placeholder="Puntos" id="Marca">
+          <input class="form-control" placeholder="Puntos" id="Marca" type="number">
         </div>
 
       </form>
@@ -201,7 +201,7 @@ function comprobar(){
     $( "input" ).each(function( index ) {
       if(condicion){
         if($( this ).val().length == 0){
-            alert("Hay campos vacíos");
+            alert("Hay un error en los campos introducidos, cambia y prueba otra vez");
             condicion = false;
         }
       }

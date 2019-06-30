@@ -123,6 +123,37 @@
            API.open();
         });
      });
+
+
+
+
+
+  </script>
+
+  <script>
+  function comprobar(){
+    var condicion = true;
+      $( "input" ).each(function( index ) {
+        if(condicion){
+          if($( this ).val().length == 0){
+              alert("Hay un error en los campos introducidos, cambia y prueba otra vez");
+              condicion = false;
+          }
+        }
+    });
+    return condicion;
+  }
+
+  function alerta(){
+      if(comprobar()){
+
+    if(confirm("¿Estás seguro de los cambios realizados?")){
+      location.href = "productos.html";
+    
+    }
+  }
+}
+
   </script>
 <h1 class="text-center">Añadir nuevo producto</h1>
 
@@ -140,7 +171,7 @@
 
     <div class="form-group">
       <label>Precio</label>
-      <input type="text" class="form-control" >
+      <input type="number" class="form-control" >
     </div>
 
     <div class="form-group">
@@ -148,7 +179,7 @@
       <input type="text" class="form-control" >
     </div>
   </form>
-  <button class="btn" onclick="location.href='productos.html'"> Añadir</button>
+  <button class="btn" onclick="alerta()"> Añadir</button>
 </div>
 
 <!--seccion: donde encontrarnos-->

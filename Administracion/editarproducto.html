@@ -137,7 +137,7 @@
         </div>
         <div class="form-group">
           <label>Precio</label>
-          <input class="form-control"  placeholder="Precio" id ="Precio">
+          <input class="form-control"  placeholder="Precio" id ="Precio" type="number">
         </div>
         <div class="form-group">
           <label>Tipo</label>
@@ -192,7 +192,7 @@ function cargaP(){
       $( "input" ).each(function( index ) {
         if(condicion){
           if($( this ).val().length == 0){
-              alert("Hay campos vacíos");
+              alert("Hay un error en los campos introducidos, cambia y prueba otra vez");
               condicion = false;
           }
         }

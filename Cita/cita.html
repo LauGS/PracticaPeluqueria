@@ -359,7 +359,62 @@
 
     <div class="row m-2">
           <div class="col">
-              <button class="btn" onclick="location.href='cita2.html'">Confirmar cita</button>
+              <button class="btn" onclick="alerta()">Confirmar cita</button>
+              <script>
+              function alerta(){
+                if(comprobar()){
+              if(comprobarNinguno()){
+                  location.href = "cita2.html";}
+
+
+              else{
+                alert("Hay que elegir al menos un servicio");
+              }
+              }
+            }
+
+              function comprobar(){
+                var condicion = true;
+                  $( "input" ).each(function( index ) {
+                    if(condicion){
+                      if($( this ).val().length == 0){
+                          alert("Hay un error en los campos introducidos, cambia y prueba otra vez");
+                          condicion = false;
+                      }
+                    }
+                });
+                return condicion;
+              }
+
+              function comprobarNinguno(){
+
+                var condicion = false;
+
+                if($("#formtinte option:selected").val() != "ninguno"){
+                  condicion = true;
+                }
+                if($("#formrizos option:selected").val() != "ninguno"){
+                  condicion = true;
+                }
+                if($("#formdep option:selected").val() != "ninguno"){
+                  condicion = true;
+                }
+                if($("#formman option:selected").val() != "ninguno"){
+                  condicion = true;
+                }
+                if($("#formcorte option:selected").val() != "ninguno"){
+                  condicion = true;
+                }
+                if($("#formlimp option:selected").val() != "ninguno"){
+                  condicion = true;
+                }
+                if($("#formpeinado option:selected").val() != "ninguno"){
+                  condicion = true;
+                }
+                $("select")
+                return condicion;
+              }
+              </script>
           </div>
    </div>
 
