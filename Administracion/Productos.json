@@ -2,7 +2,7 @@
 "Productos":[
         {
             "ID": 1,
-            "Nombre": "Secadora 1",
+            "Nombre": "Secadora Marca Tropic",
             "Tipo": "Secador",
             "Precio": 20,
             "Marca": "marca1",
@@ -11,7 +11,7 @@
         },
         {
             "ID": 2,
-            "Nombre": "Secadora 2",
+            "Nombre": "Secadora Marca Krhüner",
             "Tipo": "Secador",
             "Precio": 25,
             "Marca": "marca2",
@@ -20,7 +20,7 @@
         },
         {
             "ID": 3,
-            "Nombre": "Champu 2",
+            "Nombre": "Champu Johnson",
             "Tipo": "ChampuH",
             "Precio": 12,
             "Marca": "marca3",
@@ -29,7 +29,7 @@
         },
         {
             "ID": 4,
-            "Nombre": "Champu 3",
+            "Nombre": "Champu D´Horse",
             "Tipo": "ChampuH",
             "Precio": 50,
             "Marca": "marca3",
@@ -38,7 +38,7 @@
         },
         {
             "ID": 5,
-            "Nombre": "Plancha 1",
+            "Nombre": "Plancha Philips",
             "Tipo": "Plancha",
             "Precio": 55,
             "Marca": "marca1",
@@ -47,7 +47,7 @@
         },
         {
             "ID": 6,
-            "Nombre": "Champu para mujeres",
+            "Nombre": "Champu Fructis",
             "Tipo": "ChampuM",
             "Precio": 33,
             "Marca": "marca2",
@@ -56,7 +56,7 @@
         },
         {
             "ID": 7,
-            "Nombre": "Crema para arrugas",
+            "Nombre": "Crema Nivea para arrugas",
             "Tipo": "Crema",
             "Precio": 100,
             "Marca": "marca3",
@@ -65,7 +65,7 @@
         },
         {
             "ID": 8,
-            "Nombre": "Plancha muy cara",
+            "Nombre": "Plancha de pinzas",
             "Tipo": "Plancha",
             "Precio": 300,
             "Marca": "marca3",
@@ -74,7 +74,7 @@
         },
         {
             "ID": 9,
-            "Nombre": "Champu hombre anticaspa",
+            "Nombre": "Champu 3D Men",
             "Tipo": "ChampuH",
             "Precio": 300,
             "Marca": "marca3",
@@ -83,16 +83,16 @@
         },
         {
             "ID": 10,
-            "Nombre": "Champu hombre marca",
+            "Nombre": "Champu Just for Men",
             "Tipo": "ChampuH",
-            "Precio": 3000,
+            "Precio": 200,
             "Marca": "marca3",
             "Dirfoto": "../Imagenes/champuH4.jpg",
             "Unidades":233
         },
         {
             "ID": 11,
-            "Nombre": "Champu famoso",
+            "Nombre": "Champu House 99",
             "Tipo": "ChampuH",
             "Precio": 400,
             "Marca": "marca3",
@@ -101,7 +101,7 @@
         },
         {
             "ID": 12,
-            "Nombre": "Champu mujer anticaida",
+            "Nombre": "Champu Women's Tonic",
             "Tipo": "ChampuM",
             "Precio": 40,
             "Marca": "marca3",
@@ -110,7 +110,7 @@
         },
         {
             "ID": 13,
-            "Nombre": "Champu mujer de farmacia",
+            "Nombre": "Champu Phyto",
             "Tipo": "ChampuM",
             "Precio": 80,
             "Marca": "marca3",
@@ -119,7 +119,7 @@
         },
         {
             "ID": 14,
-            "Nombre": "Champu mujer anticaspa",
+            "Nombre": "Champu anticaida",
             "Tipo": "ChampuM",
             "Precio": 90,
             "Marca": "marca3",
@@ -128,7 +128,7 @@
         },
         {
             "ID": 15,
-            "Nombre": "Champu mujer caro",
+            "Nombre": "Champu ICON",
             "Tipo": "ChampuM",
             "Precio": 900,
             "Marca": "marca3",
@@ -137,25 +137,25 @@
         },
         {
             "ID": 16,
-            "Nombre": "Secador 3",
+            "Nombre": "Secador para viajes",
             "Tipo": "Secador",
-            "Precio": 900,
+            "Precio": 350,
             "Marca": "marca3",
             "Dirfoto": "../Imagenes/secador3.jpg",
             "Unidades":251
         },
         {
             "ID": 17,
-            "Nombre": "Secador 4",
+            "Nombre": "Secador futurista",
             "Tipo": "Secador",
-            "Precio": 9000,
+            "Precio": 600,
             "Marca": "marca3",
             "Dirfoto": "../Imagenes/secador4.jpg",
             "Unidades":252
         },
         {
             "ID": 18,
-            "Nombre": "Secador 5",
+            "Nombre": "Secador Rowenta",
             "Tipo": "Secador",
             "Precio": 5,
             "Marca": "marca3",
@@ -164,7 +164,7 @@
         },
         {
             "ID": 19,
-            "Nombre": "Plancha de viaje",
+            "Nombre": "Plancha tipo pinza para viajes",
             "Tipo": "Plancha",
             "Precio": 90,
             "Marca": "marca3",
@@ -191,7 +191,7 @@
         },
         {
             "ID": 22,
-            "Nombre": "Crema facial",
+            "Nombre": "Crema facial Pond´s",
             "Tipo": "Crema",
             "Precio": 120,
             "Marca": "marca3",
@@ -200,7 +200,7 @@
         },
         {
             "ID": 23,
-            "Nombre": "Crema clasica",
+            "Nombre": "Crema clasica Hinds",
             "Tipo": "Crema",
             "Precio": 20,
             "Marca": "marca3",
@@ -209,7 +209,7 @@
         },
         {
             "ID": 24,
-            "Nombre": "Crema corporal",
+            "Nombre": "Crema corporal Dove",
             "Tipo": "Crema",
             "Precio": 25,
             "Marca": "marca3",
@@ -218,7 +218,7 @@
         },
         {
             "ID": 25,
-            "Nombre": "Crema hidratante",
+            "Nombre": "Crema hidratante Neutrogena",
             "Tipo": "Crema",
             "Precio": 100,
             "Marca": "marca3",
