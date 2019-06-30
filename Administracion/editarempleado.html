@@ -177,8 +177,11 @@
       <p class="mt-3"><strong>Vacaciones:</strong></p>
       <input type="text" class="text m-3" id="flat"></input>
   </form>
-  <button class="btn" style="margin-left:60%;margin-bottom:3%;" onclick="location.href='empleados.html'">Guardar cambios <i class="fas fa-save"></i> </i> </button>
+
+
+  <p id="cambios" class="text-success"></p>
 </div>
+<button class="btn" style="margin-left:60%;margin-bottom:3%;" onclick="guardarCambios()">Guardar cambios <i class="fas fa-save"></i>  </button>
 </div>
 
 <script>
@@ -189,6 +192,13 @@
       mode: "multiple",
       dateFormat: "d-m-y"// 14 days from now
   });
+
+  function guardarCambios(){
+    if(confirm("¿Estás seguro de los cambios realizados?")){
+      $("#cambios").empty();
+        $("#cambios").append("Cambios guardados")
+    }
+  }
 </script>
 
 <!--seccion: donde encontrarnos-->
