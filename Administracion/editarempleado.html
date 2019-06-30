@@ -24,6 +24,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 
 
+
     <!--enlaces de mmenu-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../jquery.mmenu.js"></script>
@@ -37,7 +38,8 @@
           --mm-line-height:0px;
         }
    </style>
-
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 
 <!--Aqui va el cuerpo de texto y la pagina en general-->
@@ -170,15 +172,23 @@
         <option value="19">19:00</option>
         <option value="20">20:00</option>
     </select>
-    </div>
+
+
+      <p><strong>Vaciones:</strong></p>
+      <input type="text" class="text m-3" id="flat"></input>
   </form>
   <button class="btn" style="margin-left:60%;margin-bottom:3%;" onclick="location.href='empleados.html'">Guardar cambios <i class="fas fa-save"></i> </i> </button>
+</div>
 </div>
 
 <script>
   function cargaP(){
   $("#nombre").append("<h2 class='text-center'>"+window.sessionStorage.getItem('empleado')+"</h2>");
   }
+  $("#flat").flatpickr({
+      mode: "multiple",
+      dateFormat: "d-m-y"// 14 days from now
+  });
 </script>
 
 <!--seccion: donde encontrarnos-->
