@@ -13,57 +13,57 @@
           "hora":"13:00"
         },
         {
-            "IDU": "Carlos",
-            "servicios": ["Tinte permanente", "Corte con tijera"],
+            "IDU": "Jorge",
+            "servicios": ["Tinte permanente", "Corte con tijera", "Manicura", "Limpieza facial" ],
             "fecha":"15-10-2019",
             "hora":"12:00"
         },
         {
-            "IDU": "Michael",
-            "servicios": ["Tinte permanente", "Corte con tijera"],
+            "IDU": "Manuel",
+            "servicios": ["Tinte permanente", "Corte con tijera", "Ionizacion"],
             "fecha":"15-11-2019",
             "hora":"13:00"
         },
         {
-            "IDU": "Paco",
-            "servicios": ["Tinte permanente", "Corte con tijera"],
+            "IDU": "ignacio",
+            "servicios": ["Tinte permanente", "Corte con tijera", "Peeling"],
             "fecha":"20-09-2019",
             "hora":"15:30"
         },
         {
-            "IDU": "Pacop",
-            "servicios": ["Tinte permanente", "Corte con tijera"],
+            "IDU": "Francisco",
+            "servicios": ["Tinte permanente", "Corte con tijera", "Pedicura"],
             "fecha":"30-05-2019",
             "hora":"12:00"
         },
         {
             "IDU": "Luis",
-            "servicios": ["Tinte permanente", "Corte con tijera"],
-            "fecha":"30-05-2019",
+            "servicios": ["Tinte permanente", "Corte con tijera", "Depilacion de axilas"],
+            "fecha":"30-09-2019",
             "hora":"18:00"
         },
         {
-            "IDU": "Luis",
-            "servicios": ["Tinte permanente", "Corte con tijera"],
+            "IDU": "Ramon",
+            "servicios": ["Tinte permanente", "Depilacion de piernas"],
             "fecha":"15-03-2019",
             "hora":"19:00"
         },
         {
-            "IDU": "Ignacio",
-            "servicios": ["Tinte permanente", "Corte con tijera"],
+            "IDU": "Arturo",
+            "servicios": ["Tinte permanente", "Peinado con secador y cepillo"],
             "fecha":"20-02-2019",
             "hora":"17:00"
         },
         {
-            "IDU": "Felipe",
-            "servicios": ["Tinte permanente", "Corte con tijera"],
-            "fecha":"01-01-2019",
+            "IDU": "Lucia",
+            "servicios": ["Tinte permanente", "Corte con tijera", "Peinado con productos"],
+            "fecha":"05-09-2019",
             "hora":"14:00"
         },
         {
-            "IDU": "Carlos",
-            "servicios": ["Tinte permanente", "Corte con tijera"],
-            "fecha":"20-03-2019",
+            "IDU": "Maria",
+            "servicios": ["Tinte permanente", "Corte con tijera", "Peinado con secador y plancha"],
+            "fecha":"25-08-2019",
             "hora":"16:00"
         }
     ]
